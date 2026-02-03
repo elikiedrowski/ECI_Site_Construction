@@ -25,7 +25,7 @@ const modules = [
     stats: { label: "Active Proposals", value: "12" }
   },
   {
-    name: "Municipal CRM",
+    name: "ECI CRM",
     description: "Track long-cycle municipal projects and relationship touch-points",
     icon: Building2,
     href: "/crm",
@@ -187,7 +187,7 @@ export default function HomePage() {
                   <p className="mt-1 text-sm text-gray-600">
                     This is a non-functional proof of concept showcasing the complete platform vision. 
                     The Proposal Management module is fully interactive with simulated data. 
-                    Additional modules (Municipal CRM, Resources, Data Aggregation, Project Intelligence) 
+                    Additional modules (ECI CRM, Resources, Data Aggregation, Project Intelligence) 
                     are shown as previews to demonstrate the unified platform approach.
                   </p>
                   <div className="mt-4">

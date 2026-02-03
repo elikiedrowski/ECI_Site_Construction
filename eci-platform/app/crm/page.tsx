@@ -105,7 +105,7 @@ export default function CRMPage() {
           <div className="flex gap-4">
             <Building2 className="h-6 w-6 text-blue-600 flex-shrink-0" />
             <div>
-              <h3 className="font-semibold text-blue-900 mb-2">Phase 3: Municipal CRM Features</h3>
+              <h3 className="font-semibold text-blue-900 mb-2">Phase 3: ECI CRM Features</h3>
               <ul className="space-y-1 text-sm text-blue-800">
                 <li>• Contact database with relationship history</li>
                 <li>• Touch-point tracking and reminders</li>

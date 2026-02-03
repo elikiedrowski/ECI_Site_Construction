@@ -16,19 +16,6 @@ const steps = [
   { num: 6, title: 'Export', description: 'Format and download' },
 ];
 
-const sections = [
-  { id: 'executive', name: 'Executive Summary', required: true, selected: true, template: 'Standard' },
-  { id: 'safety', name: 'Safety Plan', required: true, selected: true, template: 'AI Generate' },
-  { id: 'approach', name: 'Project Approach', required: true, selected: true, template: 'AI Generate' },
-  { id: 'timeline', name: 'Timeline & Schedule', required: true, selected: true, template: 'AI Generate' },
-  { id: 'experience', name: 'Experience & Qualifications', required: true, selected: true, template: 'Standard' },
-  { id: 'team', name: 'Team Structure', required: true, selected: true, template: 'Standard' },
-  { id: 'references', name: 'References', required: true, selected: true, template: 'Standard' },
-  { id: 'cost', name: 'Cost Breakdown', required: true, selected: true, template: 'Manual' },
-  { id: 'quality', name: 'Quality Assurance', required: false, selected: true, template: 'AI Generate' },
-  { id: 'environment', name: 'Environmental Plan', required: false, selected: false, template: 'AI Generate' },
-];
-
 export default function ProposalWizardPage() {
   const [currentStep, setCurrentStep] = useState<Step>(1);
   const [projectName, setProjectName] = useState('Central Community Aquatic Center Renovation');
@@ -37,6 +24,24 @@ export default function ProposalWizardPage() {
   const [deadline, setDeadline] = useState('2026-03-15');
   const [generating, setGenerating] = useState(false);
   const [generationProgress, setGenerationProgress] = useState(0);
+  const [selectedSections, setSelectedSections] = useState([
+    { id: 'executive', name: 'Executive Summary', required: true, selected: true, template: 'Standard' },
+    { id: 'safety', name: 'Safety Plan', required: true, selected: true, template: 'AI Generate' },
+    { id: 'approach', name: 'Project Approach', required: true, selected: true, template: 'AI Generate' },
+    { id: 'timeline', name: 'Timeline & Schedule', required: true, selected: true, template: 'AI Generate' },
+    { id: 'experience', name: 'Experience & Qualifications', required: true, selected: true, template: 'Standard' },
+    { id: 'team', name: 'Team Structure', required: true, selected: true, template: 'Standard' },
+    { id: 'references', name: 'References', required: true, selected: true, template: 'Standard' },
+    { id: 'cost', name: 'Cost Breakdown', required: true, selected: true, template: 'Manual' },
+    { id: 'quality', name: 'Quality Assurance', required: false, selected: true, template: 'AI Generate' },
+    { id: 'environment', name: 'Environmental Plan', required: false, selected: false, template: 'AI Generate' },
+  ]);
+
+  const toggleSection = (sectionId: string) => {
+    setSelectedSections(prev => prev.map(section => 
+      section.id === sectionId ? { ...section, selected: !section.selected } : section
+    ));
+  };
 
   const handleNext = () => {
     if (currentStep === 4 && !generating) {
@@ -239,7 +244,7 @@ export default function ProposalWizardPage() {
                 Select the sections to include in your proposal and choose how to generate them.
               </p>
               <div className="space-y-2">
-                {sections.map((section) => (
+                {selectedSections.map((section) => (
                   <div
                     key={section.id}
                     className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-blue-300"
@@ -248,6 +253,7 @@ export default function ProposalWizardPage() {
                       <input
                         type="checkbox"
                         checked={section.selected}
+                        onChange={() => toggleSection(section.id)}
                         className="h-4 w-4 text-blue-600"
                       />
                       <div>
@@ -286,7 +292,7 @@ export default function ProposalWizardPage() {
                       ECI's AI and institutional knowledge base.
                     </p>
                     <div className="mt-4 text-sm text-gray-500">
-                      {sections.filter(s => s.selected && s.template === 'AI Generate').length} sections
+                      {selectedSections.filter(s => s.selected && s.template === 'AI Generate').length} sections
                       will be generated
                     </div>
                   </div>

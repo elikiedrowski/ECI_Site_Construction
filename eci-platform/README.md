@@ -13,7 +13,7 @@ Non-functional proof of concept demonstrating the complete 5-module platform vis
 - ✅ Content Generator (7 sections with AI simulation)
 - ✅ Analytics Dashboard (Recharts visualizations, guard rails preview)
 - ✅ Proposal Wizard (6-step guided workflow)
-- ✅ Municipal CRM preview (Phase 3)
+- ✅ ECI CRM preview (Phase 3)
 - ✅ Resource Management preview (Phase 4)
 - ✅ Data Aggregation preview (Phase 5)
 - ✅ Project Intelligence preview (Phase 5)
@@ -123,7 +123,7 @@ eci-platform/
 - State management and step validation
 
 ### 7-10. Future Module Previews
-- **Municipal CRM** - Phase 3 preview (relationships, pipeline, touch-points)
+- **ECI CRM** - Phase 3 preview (relationships, pipeline, touch-points)
 - **Resource Management** - Phase 4 preview (staff allocation, capacity alerts)
 - **Data Aggregation** - Phase 5 preview (unified dashboard, integrations)
 - **Project Intelligence** - Phase 5 preview (cost trends, AI predictions, budget alerts)
