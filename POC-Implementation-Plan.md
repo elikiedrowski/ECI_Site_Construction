@@ -25,7 +25,7 @@
 
 ### ECI's Complete Business Challenges & Platform Roadmap
 
-During our meeting, Ted identified **four critical pain points** that this platform will address:
+During our meeting and follow-up email, Ted identified **five critical areas** that this platform will address:
 
 ```mermaid
 mindmap
@@ -36,12 +36,18 @@ mindmap
       Historical Search
       Cost Analytics
       **Phase 1 POC - Feb 2026**
+    Municipal Project CRM
+      Long Design Projects
+      Touch Point Tracking
+      Municipal Pipeline
+      Relationship Management
+      **Phase 2A - Q2 2026**
     Resource Management
       Staffing Allocation
       Project Assignment
       Capacity Planning
       Utilization Tracking
-      **Phase 2 - Q2 2026**
+      **Phase 2B - Q2 2026**
     Data Aggregation
       Procore Integration
       Financial Systems
@@ -55,6 +61,17 @@ mindmap
       Win/Loss Analytics
       **Phase 4 - Q4 2026**
 ```
+
+### Ted's Email Follow-Up (Critical Addition):
+
+> "Frankly – we should also think about a simple CRM platform – we don't need anything crazy there either. Again, most of our work is municipal, gets advertised, etc. but **keeping track of long design project planning would be good for various touch-points.**"
+
+**Why This Matters:**
+- Municipal projects have long planning cycles (12-36+ months before RFP)
+- Multiple stakeholders require relationship management
+- Touch-point tracking ensures ECI stays top-of-mind
+- Early involvement in design phase = competitive advantage
+- **Natural integration with proposal module** - when project goes to RFP, historical relationship context informs proposal
 
 ### Why Start with Proposals?
 
@@ -90,11 +107,12 @@ Build a non-functional proof of concept demonstrating the **AI Proposal Manager*
 - Historical proposal search and retrieval
 - Cost/fee analytics based on past projects
 
-**Platform Vision Preview:**
-- Navigation structure showing future modules
-- Mockup of resource allocation dashboard (Phase 2 preview)
-- Integration points with Procore and financial systems
-- Unified design system applicable to all modules
+**Platform Vision Preview (Future Modules):**
+- **Municipal Project CRM**: Track long design project planning, touch-points, municipal pipeline
+- **Resource Management**: Staffing allocation, project assignment, capacity planning
+- **Data Aggregation**: Unified dashboard integrating Procore, financial systems, estimating software
+- **Project Intelligence**: Cost tracking, budget analysis, win/loss analytics
+- Navigation structure showing all 5 modules with consistent design system
 
 ### Scope
 **In Scope for POC:**
@@ -105,8 +123,8 @@ Build a non-functional proof of concept demonstrating the **AI Proposal Manager*
 - ✅ Sample proposal library interface
 - ✅ RFP upload and analysis mockup
 - ✅ Cost analytics dashboard prototype
-- ✅ Navigation showing full platform vision
-- ✅ Preview mockups of future modules (staffing, data aggregation)
+- ✅ Navigation showing full platform vision (5 modules)
+- ✅ Preview mockups of future modules (CRM, staffing, data aggregation, project intelligence)
 
 **Out of Scope:**
 - ❌ Live AI API integration
@@ -128,6 +146,7 @@ graph TB
         Nav[Unified Navigation]
         Dashboard[Dashboard Home]
         Proposals[Proposal Module]
+        CRM[Municipal CRM Module]
         Resources[Resource Management Module]
         DataAgg[Data Aggregation Module]
         Analytics[Project Intelligence Module]
@@ -156,11 +175,13 @@ graph TB
     
     Nav --> Dashboard
     Nav --> Proposals
+    Nav --> CRM
     Nav --> Resources
     Nav --> DataAgg
     Nav --> Analytics
     
     Proposals --> API
+    CRM --> API
     Resources --> API
     DataAgg --> API
     Analytics --> API
@@ -181,6 +202,7 @@ graph TB
     API --> DocStore
     
     style Proposals fill:#90EE90
+    style CRM fill:#FFE4B5
     style Resources fill:#FFE4B5
     style DataAgg fill:#FFE4B5
     style Analytics fill:#FFE4B5
@@ -247,21 +269,28 @@ graph LR
         P4[Cost Analytics]
     end
     
-    subgraph "Module 2: Resources"
+    subgraph "Module 2: Municipal CRM"
+        C1[Project Pipeline]
+        C2[Touch Point Tracking]
+        C3[Relationship Management]
+        C4[Design Phase Monitoring]
+    end
+    
+    subgraph "Module 3: Resources"
         R1[Staff Directory]
         R2[Allocation Tool]
         R3[Capacity Planning]
         R4[Utilization Reports]
     end
     
-    subgraph "Module 3: Data Aggregation"
+    subgraph "Module 4: Data Aggregation"
         D1[Procore Connector]
         D2[Financial Sync]
         D3[Unified Dashboard]
         D4[Real-time Updates]
     end
     
-    subgraph "Module 4: Project Intelligence"
+    subgraph "Module 5: Project Intelligence"
         I1[Cost Tracking]
         I2[Budget Variance]
         I3[Timeline Analysis]
@@ -275,6 +304,7 @@ graph LR
     end
     
     P1 & P2 & P3 & P4 --> S1
+    C1 & C2 & C3 & C4 --> S1
     R1 & R2 & R3 & R4 --> S1
     D1 & D2 & D3 & D4 --> S1
     I1 & I2 & I3 & I4 --> S1
@@ -901,7 +931,62 @@ stateDiagram-v2
 
 ### Future Module Previews (Visual Mockups Only in POC)
 
-#### 6. Resource Allocation Dashboard (Phase 2 Preview)
+#### 6. Municipal Project CRM (Phase 2A Preview)
+
+**Status:** 🟡 Future - Mockup Only  
+**Referenced in Email:** Ted's follow-up requirement
+
+**Ted's Exact Request:**
+> "Frankly – we should also think about a simple CRM platform – we don't need anything crazy there either. Again, most of our work is municipal, gets advertised, etc. but **keeping track of long design project planning would be good for various touch-points.**"
+
+```mermaid
+graph TB
+    subgraph "Municipal CRM Features"
+        A[Project Pipeline]
+        B[Touch Point Tracker]
+        C[Relationship Database]
+        D[Design Phase Monitor]
+    end
+    
+    A --> E[Municipal Projects List]
+    B --> F[Activity Timeline]
+    C --> G[Contact Management]
+    D --> H[Pre-RFP Alerts]
+```
+
+**Preview Features to Mockup:**
+- **Pipeline Dashboard**: Track projects from early design through RFP
+  - Project status: Planning, Design, Pre-RFP, Active RFP, Won, Lost
+  - Estimated RFP date and project value
+  - Last contact date and next follow-up reminder
+- **Touch Point History**: Timeline of all interactions
+  - Meetings, calls, emails, site visits
+  - Relationship strength indicators
+  - Key decision-makers and their preferences
+- **Municipal Database**: 
+  - Cities/counties ECI works with
+  - Procurement contacts
+  - Historical relationship data
+  - Past project success rates by municipality
+- **Alerts & Reminders**:
+  - "City of X design phase starting - schedule touch-point"
+  - "90 days until estimated RFP - prepare proposal team"
+  - "No contact in 60 days - relationship at risk"
+
+**Why This Matters for Municipal Work:**
+- Long design cycles (12-36 months) require consistent relationship management
+- Early involvement = competitive advantage when RFP drops
+- Track which municipalities favor ECI vs. competitors
+- **Seamless integration with Proposal Module**: When project goes to RFP, all relationship context automatically available
+
+**Connection to Other Modules:**
+- CRM → Proposals: Historical relationship informs proposal strategy
+- CRM → Resources: Identify staff with municipality relationships
+- CRM → Project Intelligence: Win/loss analysis by municipality
+
+---
+
+#### 7. Resource Allocation Dashboard (Phase 2B Preview)
 
 **Status:** 🟡 Future - Mockup Only  
 **Referenced in Meeting:** Demonstrated via consulting firm project management tool
@@ -942,7 +1027,7 @@ graph TB
 
 ---
 
-#### 7. Data Aggregation Dashboard (Phase 3 Preview)
+#### 8. Data Aggregation Dashboard (Phase 3 Preview)
 
 **Status:** 🟡 Future - Mockup Only  
 **Ted's Challenge:** "We have so many systems... they're kind of working in silos"
@@ -990,7 +1075,7 @@ graph LR
 
 ---
 
-#### 8. Project Cost Intelligence (Phase 4 Preview)
+#### 9. Project Cost Intelligence (Phase 4 Preview)
 
 **Status:** 🟡 Future - Mockup Only  
 **Ted's Need:** "Building projections manually... what falls off when... different people in different systems"
@@ -1765,39 +1850,46 @@ gantt
 - [ ] Client can visualize production version
 
 ### Demo Success - Platform Vision
-- [ ] Navigation clearly shows all 4 modules addressing Ted's pain points:
+- [ ] Navigation clearly shows all 5 modules addressing Ted's pain points:
   - [ ] ✅ Proposal Management (working)
+  - [ ] 🔜 Municipal Project CRM (mockup - Ted's email requirement)
   - [ ] 🔜 Resource Allocation (mockup)
   - [ ] 🔜 Data Aggregation (mockup)
   - [ ] 🔜 Project Intelligence (mockup)
 - [ ] Each pain point from meeting is addressed by a specific module
+- [ ] CRM mockup shows municipal project tracking with touch-point management
 - [ ] Integration points with Procore/financial systems are clear
 - [ ] Roadmap shows logical build sequence
 - [ ] Value proposition demonstrates why custom > off-the-shelf
 
 ### Business Success
 - [ ] Ted Johnson and team are impressed with proposal module
-- [ ] **Ted sees the platform vision addressing all 4 pain points**
+- [ ] **Ted sees the platform vision addressing all 5 pain points**
 - [ ] Clear differentiation from off-the-shelf proposal-only solutions
 - [ ] Cost/value proposition is evident for full platform
 - [ ] Team understands how modules work together
-- [ ] Team is eager to move to Phase 2 (production proposal module)
+- [ ] Team is eager to move to Phase 2 (production proposal module + CRM)
 - [ ] **ECI can envision phases 3-4 (resource management, data aggregation)**
 - [ ] Positioning vs. competitors (Shred.ai, Unanet, Responsive) is clear
 - [ ] Integration strategy resonates (vs. multiple vendor silos)
+- [ ] **CRM for municipal project tracking resonates with Ted's long-cycle sales process**
 
 ### Demo Success
-- [ ] Can demonstrate all 5 core features
+- [ ] Can demonstrate all 5 core proposal features
+- [ ] Can show preview mockups of 4 future modules (CRM, resources, data aggregation, project intelligence)
 - [ ] Sample data is realistic and relevant to ECI
 - [ ] User flows are intuitive
 - [ ] Simulated AI responses are convincing
 - [ ] Client can visualize production version
+- [ ] Platform navigation shows complete 5-module vision
 
-### Business Success
-- [ ] Ted Johnson and team are impressed
-- [ ] Clear differentiation from off-the-shelf solutions
-- [ ] Cost/value proposition is evident
-- [ ] Team is eager to move to Phase 2 (production build)
+### Business Success (Final)
+- [ ] Ted Johnson and team are impressed with both proposal module and platform vision
+- [ ] Clear differentiation from off-the-shelf solutions (Shred.ai, Unanet, Responsive)
+- [ ] Cost/value proposition is evident ($70K custom vs. $37.5-45K for 3 years of limited tools)
+- [ ] Team is eager to move to Phase 2 (production build starting with proposals + CRM)
+- [ ] ECI sees value in unified platform vs. multiple vendor silos
+- [ ] Municipal CRM requirement from Ted's email is acknowledged and addressed
 
 ---
 
