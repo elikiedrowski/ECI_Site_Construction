@@ -12,6 +12,129 @@ Meeting with Ted Johnson revealed significant opportunities to apply AI-powered 
 
 ---
 
+## Post-Meeting Update (February 3, 2026)
+
+### Email Exchange with Ted Johnson
+
+**From:** Ted Johnson  
+**Date:** February 3, 2026  
+**Subject:** Re: Follow-up from our meeting
+
+**Ted's Response:**
+> "Thanks for taking the time to meet with us last week. I thought it was a great conversation and I'm excited to explore how we might be able to work together. I shared some of the concepts with my team and they're intrigued as well.
+>
+> One of my team members put together a comparison of some AI proposal software options we've been looking at (see below). I'd be interested in your thoughts on how a custom solution might compare to these off-the-shelf options - both from a capability and cost perspective.
+>
+> Let's plan to connect again soon to discuss next steps."
+
+### Competitive Analysis: Off-The-Shelf AI Proposal Software
+
+ECI's team has researched three commercial AI proposal solutions. Below is their analysis:
+
+#### 1. OpenAsset Shred.ai
+**How it works:**
+- Upload past proposals into "Proposal Library" section
+- Uses database to pull information for future proposals
+- Example: Can discuss construction approach for turf/field projects by analyzing past proposals
+- Upload RFPs and Shred extracts/organizes important information
+- Identifies incongruencies (e.g., conflicting page count requirements)
+- Identifies most important project aspects
+- Summarizes key points
+
+**Pricing:**
+- $15,000/year for unlimited users and proposals (before end of 2025)
+- Price locked in forever
+- Increases to $20,000-$25,000 in 2026
+
+**Video:** https://www.youtube.com/watch?v=_lsCRjDUkP4
+
+#### 2. Unanet Proposal AI
+**How it works:**
+- Similar structure with proposal library
+- Pulls information from past proposals
+- Compiles answers for RFPs using historical content
+
+**Pricing:**
+- $12,500/year for unlimited users and proposals
+
+**Video:** https://play.goconsensus.com/a0a570711
+
+#### 3. Responsive
+**How it works:**
+- Upload past proposals for content drafting
+- **Key differentiator:** Allows Excel and other file formats (not just PDFs)
+- Drafts content for RFPs using past work
+
+**Pricing:**
+- $11,000/year base fee
+- $1,500 per additional user
+- **Note:** Less attractive than competitors due to per-user pricing, but may be comparable to Unanet if only one login needed
+
+### Custom Solution Positioning vs. Off-The-Shelf
+
+**Advantages of Custom Development:**
+
+1. **Integration Capabilities**
+   - Off-the-shelf: Standalone systems, limited integration with Procore, financial systems, estimating software
+   - Custom: Full API integration with existing ECI systems for unified data flow
+
+2. **Customization & Flexibility**
+   - Off-the-shelf: Fixed features, limited customization to ECI's unique recreation construction workflow
+   - Custom: Tailored to ECI's specific proposal structure, safety requirements, and business processes
+   - Can incorporate ECI-specific guard rails for estimates (prevent missing labor costs, pricing errors)
+
+3. **Total Cost of Ownership**
+   - Off-the-shelf: $11,000-$25,000/year recurring forever
+   - Custom: One-time development investment (~$20,000-$40,000 estimated for proposal module), minimal ongoing costs
+   - **Break-even:** 2-3 years vs. locked-in annual fees
+
+4. **Scope Expansion**
+   - Off-the-shelf: Single-purpose proposal tools only
+   - Custom: Can expand to include:
+     - Historical project cost/fee analytics dashboard
+     - Resource allocation integration
+     - Data aggregation from disparate systems
+     - Mobile access for field teams
+     - Custom reporting and KPIs specific to recreation construction
+
+5. **Data Ownership & Privacy**
+   - Off-the-shelf: Proprietary data uploaded to third-party platforms
+   - Custom: ECI maintains complete ownership and control of intellectual property
+
+6. **AI Model Selection**
+   - Off-the-shelf: Limited to vendor's AI model and capabilities
+   - Custom: Can leverage latest/best AI models (Claude, GPT-4, specialized models) based on specific use cases
+   - Can optimize for cost vs. performance on per-feature basis
+
+**Competitive Considerations:**
+
+While off-the-shelf solutions offer quick deployment, they address only the proposal writing component. ECI's broader pain points (staffing allocation, data aggregation, cost tracking) would require separate solutions, creating:
+- Multiple vendor relationships
+- Additional integration challenges
+- Compounding annual costs
+- Fragmented user experience
+
+A custom solution could serve as ECI's unified business intelligence and automation platform, with proposal management as the initial high-value module.
+
+**Recommended Approach:**
+
+1. **Phase 1:** Technical feasibility assessment for AI proposal manager (5-10 hours)
+   - Demonstrate capability using sample ECI Word documents
+   - Compare output quality vs. off-the-shelf demos
+   - Provide detailed scope and cost estimate
+
+2. **Phase 2:** If Phase 1 successful, build proposal module MVP
+   - Core features: Historical proposal search, content generation, RFP analysis
+   - Target cost: $20,000-$40,000 one-time investment
+   - 6-8 week delivery timeline
+
+3. **Phase 3:** Expand based on ROI and priorities
+   - Add resource allocation dashboard
+   - Integrate with Procore/financial systems
+   - Build analytics and reporting layer
+
+---
+
 ## Key Business Challenges Identified
 
 ### 1. **Proposal Management (HIGH PRIORITY)**
