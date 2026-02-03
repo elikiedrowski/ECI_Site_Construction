@@ -94,6 +94,350 @@ flowchart TB
 
 ---
 
+## Detailed Technical Architecture
+
+### Component Architecture
+
+```mermaid
+graph TB
+    subgraph "Presentation Layer"
+        Pages[Next.js Pages/Routes]
+        Layout[Layout Components]
+        Features[Feature Components]
+        UI[UI Components - shadcn]
+    end
+    
+    subgraph "State Management"
+        Context[React Context]
+        Hooks[Custom Hooks]
+        Cache[Client Cache]
+    end
+    
+    subgraph "Service Layer"
+        MockAPI[Mock API Service]
+        DataService[Data Service]
+        AIService[AI Simulator Service]
+        FileService[File Handler]
+    end
+    
+    subgraph "Data Layer - POC"
+        JSON[JSON Mock Data]
+        LocalStorage[Browser Storage]
+        StaticAssets[Static Files]
+    end
+    
+    Pages --> Layout
+    Layout --> Features
+    Features --> UI
+    Features --> Context
+    Context --> Hooks
+    Hooks --> MockAPI
+    MockAPI --> DataService
+    MockAPI --> AIService
+    MockAPI --> FileService
+    DataService --> JSON
+    AIService --> JSON
+    FileService --> StaticAssets
+    Cache --> LocalStorage
+```
+
+### Data Flow Architecture
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant UI
+    participant State
+    participant Service
+    participant MockData
+    
+    User->>UI: Interact (Upload RFP)
+    UI->>State: Dispatch Action
+    State->>Service: Request Processing
+    Service->>MockData: Fetch Sample Response
+    MockData-->>Service: Return Mock Analysis
+    Service-->>State: Update State
+    State-->>UI: Re-render
+    UI-->>User: Display Results
+```
+
+### Frontend Component Hierarchy
+
+```mermaid
+graph TD
+    App[App Root] --> Layout[Main Layout]
+    Layout --> Nav[Navigation]
+    Layout --> Main[Main Content]
+    Layout --> Toast[Toast Notifications]
+    
+    Main --> Dashboard[Dashboard Page]
+    Main --> Library[Proposal Library Page]
+    Main --> RFP[RFP Analysis Page]
+    Main --> Generator[Content Generator Page]
+    Main --> Analytics[Analytics Page]
+    Main --> Wizard[Proposal Wizard Page]
+    
+    Library --> LibraryGrid[Grid View]
+    Library --> LibraryFilters[Filter Sidebar]
+    Library --> LibrarySearch[Search Bar]
+    
+    LibraryGrid --> ProposalCard[Proposal Card x N]
+    ProposalCard --> CardActions[Action Buttons]
+    
+    RFP --> UploadZone[Dropzone Component]
+    RFP --> AnalysisDisplay[Analysis Results]
+    AnalysisDisplay --> SummaryCard[Summary Cards]
+    AnalysisDisplay --> RequirementsList[Requirements List]
+    
+    Generator --> ContentForm[Content Type Form]
+    Generator --> AIOutput[Generated Content Display]
+    Generator --> ContentEditor[Inline Editor]
+    
+    Analytics --> FilterPanel[Analytics Filters]
+    Analytics --> Charts[Chart Components]
+    Analytics --> DataTable[Data Grid]
+    
+    Wizard --> WizardStepper[Step Indicator]
+    Wizard --> WizardSteps[Step Content]
+    WizardSteps --> Step1[Project Info]
+    WizardSteps --> Step2[Requirements]
+    WizardSteps --> Step3[Content Selection]
+    WizardSteps --> Step4[Generation]
+    WizardSteps --> Step5[Review]
+    WizardSteps --> Step6[Export]
+```
+
+### Data Model (Mock Data Structure)
+
+```mermaid
+erDiagram
+    PROPOSAL ||--o{ PROPOSAL_SECTION : contains
+    PROPOSAL ||--|| PROJECT : for
+    PROPOSAL {
+        string id PK
+        string title
+        string clientName
+        enum projectType
+        number budget
+        date submissionDate
+        enum status
+        number fee
+        number feePercentage
+        number durationMonths
+        string[] tags
+        date createdAt
+    }
+    
+    PROPOSAL_SECTION {
+        string id PK
+        string proposalId FK
+        string sectionType
+        string content
+        number order
+        boolean aiGenerated
+    }
+    
+    PROJECT {
+        string id PK
+        string name
+        enum type
+        number estimatedBudget
+        date deadline
+        string location
+    }
+    
+    RFP ||--o{ RFP_REQUIREMENT : contains
+    RFP {
+        string id PK
+        string projectName
+        string clientName
+        date uploadDate
+        date deadline
+        number pageLimit
+        string[] inconsistencies
+        enum priority
+    }
+    
+    RFP_REQUIREMENT {
+        string id PK
+        string rfpId FK
+        string requirement
+        boolean required
+        string category
+    }
+    
+    CONTENT_TEMPLATE {
+        string id PK
+        string title
+        enum category
+        string template
+        string[] variables
+        date lastUsed
+    }
+    
+    ANALYTICS_DATA {
+        string id PK
+        number year
+        enum projectType
+        number avgFee
+        number avgDuration
+        number winRate
+        number projectCount
+    }
+```
+
+### State Management Pattern
+
+```mermaid
+stateDiagram-v2
+    [*] --> Idle
+    Idle --> Loading: User Action
+    Loading --> Success: Data Received
+    Loading --> Error: Request Failed
+    Success --> Idle: Reset
+    Error --> Idle: Retry
+    Success --> Updating: Modify Data
+    Updating --> Success: Update Complete
+    Updating --> Error: Update Failed
+```
+
+### File Processing Flow (POC - Simulated)
+
+```mermaid
+flowchart LR
+    A[User Uploads File] --> B{Validate File}
+    B -->|Invalid| C[Show Error]
+    B -->|Valid| D[Display Upload Progress]
+    D --> E[Simulate Processing Delay]
+    E --> F[Generate Mock Analysis]
+    F --> G[Extract Mock Data]
+    G --> H{Document Type?}
+    H -->|RFP| I[Create RFP Analysis]
+    H -->|Proposal| J[Add to Library]
+    I --> K[Display Results]
+    J --> K
+    C --> A
+```
+
+### Security Architecture (Future Production)
+
+```mermaid
+graph TB
+    subgraph "Client Browser"
+        WebApp[Web Application]
+    end
+    
+    subgraph "Edge Layer"
+        CDN[CDN - Vercel Edge]
+        WAF[Web Application Firewall]
+    end
+    
+    subgraph "Application Layer"
+        Auth[Authentication - NextAuth]
+        API[API Routes]
+        Middleware[Security Middleware]
+    end
+    
+    subgraph "Data Layer"
+        DB[(Encrypted Database)]
+        Storage[(Encrypted File Storage)]
+        Secrets[Secret Manager]
+    end
+    
+    WebApp --> CDN
+    CDN --> WAF
+    WAF --> Auth
+    Auth --> Middleware
+    Middleware --> API
+    API --> DB
+    API --> Storage
+    API --> Secrets
+    
+    style WebApp fill:#E3F2FD
+    style CDN fill:#FFF3E0
+    style WAF fill:#FFF3E0
+    style Auth fill:#E8F5E9
+    style Middleware fill:#E8F5E9
+    style DB fill:#FCE4EC
+    style Storage fill:#FCE4EC
+    style Secrets fill:#FCE4EC
+```
+
+### Deployment Architecture (Future Production)
+
+```mermaid
+graph TB
+    subgraph "Developer Workflow"
+        Dev[Local Development]
+        Git[GitHub Repository]
+    end
+    
+    subgraph "CI/CD Pipeline"
+        Actions[GitHub Actions]
+        Tests[Automated Tests]
+        Build[Build Process]
+    end
+    
+    subgraph "Hosting - Vercel"
+        Preview[Preview Deployments]
+        Production[Production Environment]
+    end
+    
+    subgraph "External Services"
+        AI[AI API - Claude/GPT]
+        DB[(Database - Supabase)]
+        Storage[R2/S3 Storage]
+        Monitor[Monitoring - Sentry]
+    end
+    
+    Dev --> Git
+    Git --> Actions
+    Actions --> Tests
+    Tests --> Build
+    Build --> Preview
+    Build --> Production
+    
+    Production --> AI
+    Production --> DB
+    Production --> Storage
+    Production --> Monitor
+    
+    style Dev fill:#E3F2FD
+    style Preview fill:#FFF3E0
+    style Production fill:#E8F5E9
+```
+
+### API Design (Future Production Reference)
+
+```mermaid
+graph LR
+    subgraph "API Endpoints - Future"
+        A[POST /api/proposals/upload]
+        B[GET /api/proposals/list]
+        C[POST /api/rfp/analyze]
+        D[POST /api/content/generate]
+        E[GET /api/analytics/costs]
+        F[POST /api/wizard/save]
+    end
+    
+    subgraph "Services"
+        S1[Document Service]
+        S2[AI Service]
+        S3[Analytics Service]
+    end
+    
+    A --> S1
+    B --> S1
+    C --> S1
+    C --> S2
+    D --> S2
+    E --> S3
+    F --> S1
+    F --> S2
+```
+
+---
+
 ## Feature Set
 
 ### 1. Proposal Library Dashboard
@@ -462,6 +806,333 @@ stateDiagram-v2
 - Drag-and-drop upload
 - File type validation
 - Preview support
+
+---
+
+## Technical Specifications
+
+### Development Environment Setup
+
+**Required Tools:**
+```bash
+# Node.js & Package Manager
+node >= 18.17.0
+npm >= 9.0.0 or pnpm >= 8.0.0
+
+# Version Control
+git >= 2.40.0
+
+# Code Editor (Recommended)
+VS Code with extensions:
+  - ESLint
+  - Prettier
+  - Tailwind CSS IntelliSense
+  - TypeScript and JavaScript Language Features
+```
+
+**Environment Variables (.env.local):**
+```bash
+# POC Configuration
+NEXT_PUBLIC_APP_NAME="ECI Proposal Manager"
+NEXT_PUBLIC_DEMO_MODE=true
+
+# Future Production (Not used in POC)
+# NEXT_PUBLIC_API_URL=
+# OPENAI_API_KEY=
+# ANTHROPIC_API_KEY=
+# DATABASE_URL=
+# NEXTAUTH_SECRET=
+```
+
+### Project Structure
+
+```
+eci-proposal-manager/
+├── app/                          # Next.js App Router
+│   ├── (dashboard)/             # Dashboard layout group
+│   │   ├── page.tsx             # Dashboard home
+│   │   ├── proposals/           # Proposal library
+│   │   ├── rfp-analysis/        # RFP analyzer
+│   │   ├── generator/           # Content generator
+│   │   ├── analytics/           # Analytics dashboard
+│   │   └── wizard/              # Proposal wizard
+│   ├── layout.tsx               # Root layout
+│   ├── globals.css              # Global styles
+│   └── providers.tsx            # Context providers
+├── components/                   # React components
+│   ├── ui/                      # shadcn components
+│   │   ├── button.tsx
+│   │   ├── card.tsx
+│   │   ├── dialog.tsx
+│   │   └── ...
+│   ├── proposal/                # Proposal-specific
+│   │   ├── proposal-card.tsx
+│   │   ├── proposal-grid.tsx
+│   │   └── proposal-filters.tsx
+│   ├── rfp/                     # RFP analysis
+│   │   ├── upload-zone.tsx
+│   │   └── analysis-display.tsx
+│   ├── analytics/               # Analytics
+│   │   ├── cost-chart.tsx
+│   │   └── stats-card.tsx
+│   └── layout/                  # Layout components
+│       ├── nav.tsx
+│       ├── sidebar.tsx
+│       └── header.tsx
+├── lib/                         # Utilities
+│   ├── mock-data/               # Mock data generators
+│   │   ├── proposals.ts
+│   │   ├── rfp-analysis.ts
+│   │   ├── analytics.ts
+│   │   └── templates.ts
+│   ├── services/                # Mock services
+│   │   ├── ai-simulator.ts
+│   │   └── data-service.ts
+│   ├── utils.ts                 # Helper functions
+│   └── types.ts                 # TypeScript types
+├── public/                      # Static assets
+│   ├── sample-proposals/        # Sample PDFs
+│   └── images/
+├── hooks/                       # Custom React hooks
+│   ├── use-proposals.ts
+│   ├── use-rfp-analysis.ts
+│   └── use-analytics.ts
+├── contexts/                    # React Context
+│   └── app-context.tsx
+├── tailwind.config.ts           # Tailwind configuration
+├── tsconfig.json                # TypeScript config
+├── next.config.js               # Next.js config
+└── package.json                 # Dependencies
+```
+
+### TypeScript Type Definitions
+
+```typescript
+// lib/types.ts
+
+export type ProjectType = 'Recreation' | 'Sports Complex' | 'Aquatic' | 'Playground' | 'Other';
+export type ProposalStatus = 'Won' | 'Lost' | 'Pending';
+export type ContentCategory = 'Safety' | 'Approach' | 'Experience' | 'Timeline' | 'Quality' | 'Environment' | 'Team';
+export type Priority = 'High' | 'Medium' | 'Low';
+
+export interface Proposal {
+  id: string;
+  title: string;
+  client: string;
+  projectType: ProjectType;
+  budget: number;
+  submissionDate: Date;
+  status: ProposalStatus;
+  fee: number;
+  feePercentage: number;
+  durationMonths: number;
+  fileUrl: string;
+  tags: string[];
+  sections?: ProposalSection[];
+}
+
+export interface ProposalSection {
+  id: string;
+  proposalId: string;
+  sectionType: ContentCategory;
+  content: string;
+  order: number;
+  aiGenerated: boolean;
+}
+
+export interface RFPAnalysis {
+  id: string;
+  projectName: string;
+  clientName: string;
+  budgetRange: { min: number; max: number };
+  deadline: Date;
+  pageLimit: number;
+  inconsistencies: string[];
+  requiredSections: string[];
+  keyRequirements: string[];
+  priorityLevel: Priority;
+  uploadDate: Date;
+}
+
+export interface ContentTemplate {
+  id: string;
+  title: string;
+  category: ContentCategory;
+  template: string;
+  variables: string[];
+  lastUsed: Date;
+}
+
+export interface AnalyticsData {
+  year: number;
+  projectType: ProjectType;
+  avgFee: number;
+  avgFeePercentage: number;
+  avgDuration: number;
+  winRate: number;
+  projectCount: number;
+}
+
+export interface FilterOptions {
+  projectTypes: ProjectType[];
+  yearRange: { start: number; end: number };
+  budgetRange: { min: number; max: number };
+  status: ProposalStatus[];
+}
+```
+
+### Performance Requirements
+
+| Metric | Target | Measurement |
+|--------|--------|-------------|
+| **First Contentful Paint** | < 1.5s | Lighthouse |
+| **Largest Contentful Paint** | < 2.5s | Lighthouse |
+| **Time to Interactive** | < 3s | Lighthouse |
+| **Cumulative Layout Shift** | < 0.1 | Lighthouse |
+| **Component Render Time** | < 100ms | React DevTools |
+| **Search/Filter Response** | < 200ms | Custom timing |
+| **Mock AI Response** | 1-3s (simulated) | setTimeout |
+
+### Browser Support
+
+| Browser | Minimum Version |
+|---------|----------------|
+| Chrome | Last 2 versions |
+| Firefox | Last 2 versions |
+| Safari | Last 2 versions |
+| Edge | Last 2 versions |
+| Mobile Safari | iOS 14+ |
+| Chrome Mobile | Last 2 versions |
+
+### Responsive Breakpoints
+
+```typescript
+// Tailwind breakpoints
+export const breakpoints = {
+  sm: '640px',   // Small tablets
+  md: '768px',   // Tablets
+  lg: '1024px',  // Laptops
+  xl: '1280px',  // Desktops
+  '2xl': '1536px' // Large desktops
+};
+```
+
+### Mock Data Generation Strategy
+
+```typescript
+// lib/mock-data/proposals.ts
+import { faker } from '@faker-js/faker';
+
+export function generateMockProposals(count: number = 20): Proposal[] {
+  return Array.from({ length: count }, (_, i) => ({
+    id: faker.string.uuid(),
+    title: `${faker.company.name()} ${faker.helpers.arrayElement([
+      'Recreation Center',
+      'Aquatic Complex',
+      'Sports Facility',
+      'Playground Development'
+    ])}`,
+    client: faker.company.name(),
+    projectType: faker.helpers.arrayElement([
+      'Recreation',
+      'Sports Complex',
+      'Aquatic',
+      'Playground'
+    ]),
+    budget: faker.number.int({ min: 500000, max: 15000000 }),
+    submissionDate: faker.date.past({ years: 3 }),
+    status: faker.helpers.arrayElement(['Won', 'Lost', 'Pending']),
+    fee: faker.number.int({ min: 50000, max: 1500000 }),
+    feePercentage: faker.number.float({ min: 8, max: 15, precision: 0.1 }),
+    durationMonths: faker.number.int({ min: 6, max: 36 }),
+    fileUrl: `/sample-proposals/proposal-${i + 1}.pdf`,
+    tags: faker.helpers.arrayElements([
+      'LEED Certified',
+      'Public Sector',
+      'Private Sector',
+      'Fast Track',
+      'Design-Build'
+    ], { min: 1, max: 3 })
+  }));
+}
+```
+
+### AI Simulation Service
+
+```typescript
+// lib/services/ai-simulator.ts
+
+export class AISimulator {
+  private delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+  
+  async generateContent(
+    category: ContentCategory,
+    context: {
+      projectType: string;
+      budget: number;
+      requirements: string[];
+    }
+  ): Promise<string> {
+    // Simulate API delay
+    await this.delay(2000);
+    
+    // Return mock generated content
+    const templates = {
+      Safety: `Safety is our top priority at ECI Construction...`,
+      Approach: `Our approach to ${context.projectType} projects...`,
+      // ... more templates
+    };
+    
+    return templates[category] || 'Generated content...';
+  }
+  
+  async analyzeRFP(file: File): Promise<RFPAnalysis> {
+    await this.delay(3000);
+    
+    return {
+      id: faker.string.uuid(),
+      projectName: 'Municipal Aquatic Center Renovation',
+      clientName: 'City of Denver',
+      budgetRange: { min: 2500000, max: 3200000 },
+      deadline: new Date('2026-03-15'),
+      pageLimit: 25,
+      inconsistencies: ['Page 3 lists 30-page limit, conflicts with cover page'],
+      requiredSections: ['Safety Plan', 'Project Approach', 'Timeline', 'References'],
+      keyRequirements: ['LEED certification', 'Prevailing wage compliance'],
+      priorityLevel: 'High',
+      uploadDate: new Date()
+    };
+  }
+}
+```
+
+### Testing Strategy (Future)
+
+```mermaid
+graph TB
+    subgraph "Testing Pyramid"
+        E2E[E2E Tests - Playwright]
+        Integration[Integration Tests - Jest]
+        Unit[Unit Tests - Vitest]
+        Visual[Visual Regression - Chromatic]
+    end
+    
+    Unit --> Integration
+    Integration --> E2E
+    Integration --> Visual
+    
+    style Unit fill:#E8F5E9
+    style Integration fill:#FFF3E0
+    style E2E fill:#E3F2FD
+    style Visual fill:#FCE4EC
+```
+
+**For POC (Manual Testing):**
+- Component visual testing in Storybook
+- Manual testing checklist for each feature
+- Cross-browser compatibility checks
+- Mobile responsiveness verification
+- Accessibility audit with axe DevTools
 
 ---
 
