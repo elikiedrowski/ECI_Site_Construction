@@ -1,7 +1,7 @@
-# ECI Construction - AI Proposal Manager Project Cost Estimate
+# ECI Construction - Unified Business Intelligence Platform Cost Estimate
 
 **Client:** ECI Construction  
-**Project:** AI-Powered Proposal Management System  
+**Project:** AI-Powered Business Intelligence Platform (Phase 1: Proposal Management)  
 **Date:** February 3, 2026  
 **Prepared By:** CRM Wizards / Kiedrowski Team  
 **Valid Until:** March 31, 2026
@@ -21,7 +21,9 @@
 ## Executive Summary
 
 ### Project Overview
-Development of a custom AI-powered proposal management system tailored specifically for ECI Construction's unique recreation construction business. The system will replace manual proposal processes, reduce CEO time spent on proposals by 80%+, and preserve institutional knowledge.
+Development of a custom AI-powered unified business intelligence platform tailored specifically for ECI Construction's unique recreation construction business. **Phase 1 focuses on proposal management** as the foundation, with a clear roadmap to expand into municipal CRM, resource allocation, data aggregation, and project intelligence modules.
+
+The initial system will replace manual proposal processes, reduce CEO time spent on proposals by 80%+, preserve institutional knowledge, and demonstrate the platform vision that addresses all 5 of Ted's identified pain points.
 
 ### Investment Summary
 
@@ -66,11 +68,17 @@ pie title Total Investment by Phase
 
 **Deliverables:**
 - ✅ Professional UI prototype (enterprise SaaS quality)
-- ✅ Interactive mockup of all core features
+- ✅ Interactive mockup of all core proposal features
+- ✅ Platform navigation showing all 5 future modules:
+  - Proposal Management (working in POC)
+  - Municipal Project CRM (preview mockup)
+  - Resource Allocation (preview mockup)
+  - Data Aggregation (preview mockup)
+  - Project Intelligence (preview mockup)
 - ✅ Simulated AI responses with ECI sample data
 - ✅ Demo presentation materials
 - ✅ Technical architecture documentation
-- ✅ Production roadmap
+- ✅ Production roadmap for full platform expansion
 
 **Hourly Breakdown:**
 | Role | Hours | Rate | Subtotal |
@@ -130,6 +138,11 @@ pie title Total Investment by Phase
 - Fee analysis by project type
 - Timeline trends
 - Simple visualizations
+- **Estimate validation & sanity checks:**
+  - Fee recommendation based on historical data
+  - Warnings for unusual pricing patterns
+  - Timeline reality checks
+  - Comparison to similar past projects
 
 **5. User Interface**
 - Responsive web application
@@ -169,7 +182,7 @@ pie title Total Investment by Phase
 - Template selection
 - Export to PDF and Word
 
-**2. Advanced Cost Analytics**
+**2. Advanced Cost Analytics & Estimate Guard Rails**
 - Interactive dashboards
 - Historical cost comparisons
 - Fee recommendation engine
@@ -177,6 +190,12 @@ pie title Total Investment by Phase
 - Win/loss analysis
 - Custom report builder
 - Data export capabilities
+- **Estimate validation & guard rails:**
+  - Prevent missing labor costs in proposals
+  - Flag pricing errors before submission
+  - Automated compliance checks (prevailing wage, LEED requirements)
+  - Alert if estimate significantly deviates from historical patterns
+  - Custom validation rules for ECI's recreation construction workflow
 
 **3. Enhanced AI Features**
 - Fine-tuning on ECI-specific content
@@ -367,7 +386,11 @@ xychart-beta
 **Quantifiable:**
 - Faster proposal turnaround: 50% reduction (competitive edge)
 - Higher proposal quality: Estimated 10-15% win rate improvement
-- Knowledge retention: Prevents loss of institutional knowledge ($100K+ value)
+- **Institutional knowledge preservation: $100K+ value**
+  - Captures Ted's 20+ years of recreation construction expertise
+  - Protects against knowledge loss during transitions/succession
+  - Ensures consistency regardless of team changes
+- Estimate error prevention: Saves $50K+ annually in avoided pricing mistakes
 
 **Non-Quantifiable:**
 - CEO time freed for strategic initiatives
@@ -375,6 +398,8 @@ xychart-beta
 - Consistent brand voice across proposals
 - Improved team collaboration
 - Scalability as company grows
+- **Municipal project relationship tracking** (long-cycle sales advantage)
+- Platform foundation for resource allocation & data aggregation modules
 
 ---
 
@@ -566,6 +591,9 @@ Changes to scope will be handled via change order process:
 | **AI Content Generation** | ✅ ECI-trained | ✅ Generic | ✅ Generic | ✅ Generic |
 | **RFP Analysis** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
 | **Cost Analytics** | ✅ Custom dashboards | ❌ No | ❌ No | ❌ No |
+| **Estimate Guard Rails** | ✅ Yes | ❌ No | ❌ No | ❌ No |
+| **Knowledge Preservation** | ✅ Institutional | ⚠️ Generic | ⚠️ Generic | ⚠️ Generic |
+| **Municipal CRM** | ✅ Phase 2+ | ❌ No | ❌ No | ❌ No |
 | **Procore Integration** | ✅ Yes | ❌ No | ⚠️ Limited | ❌ No |
 | **Resource Allocation** | ✅ Phase 3+ | ❌ No | ❌ No | ❌ No |
 | **Custom Branding** | ✅ Full control | ⚠️ Limited | ⚠️ Limited | ⚠️ Limited |
