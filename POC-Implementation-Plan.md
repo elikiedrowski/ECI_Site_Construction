@@ -41,25 +41,25 @@ mindmap
       Touch Point Tracking
       Municipal Pipeline
       Relationship Management
-      **Phase 2A - Q2 2026**
+      **Phase 3 - Q2 2026**
     Resource Management
       Staffing Allocation
       Project Assignment
       Capacity Planning
       Utilization Tracking
-      **Phase 2B - Q2 2026**
+      **Phase 4 - Q3 2026**
     Data Aggregation
       Procore Integration
       Financial Systems
       Estimating Software
       Unified Dashboard
-      **Phase 3 - Q3 2026**
+      **Phase 5 - Q3 2026**
     Project Intelligence
       Cost Tracking
       Budget vs Actual
       Timeline Analysis
       Win/Loss Analytics
-      **Phase 4 - Q4 2026**
+      **Phase 5 - Q4 2026**
 ```
 
 ### Ted's Email Follow-Up (Critical Addition):

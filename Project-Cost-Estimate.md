@@ -31,18 +31,18 @@ The initial system will replace manual proposal processes, reduce CEO time spent
 pie title Total Investment by Phase
     "Phase 1: POC" : 5000
     "Phase 2: Proposal MVP" : 28000
-    "Phase 2A: Municipal CRM" : 22000
-    "Phase 3: Advanced Features" : 25000
-    "Phase 4: Integration & Polish" : 15000
+    "Phase 3: Municipal CRM" : 22000
+    "Phase 4: Advanced Features" : 25000
+    "Phase 5: Integration & Polish" : 15000
 ```
 
 | Phase | Deliverable | Timeline | Investment |
 |-------|-------------|----------|------------|
 | **Phase 1** | Non-Functional POC | 2 weeks | $5,000 |
 | **Phase 2** | Proposal MVP (Core Features) | 6-8 weeks | $28,000 |
-| **Phase 2A** | Municipal CRM Module | 4-5 weeks | $22,000 |
-| **Phase 3** | Advanced Features & Guard Rails | 5-6 weeks | $25,000 |
-| **Phase 4** | Integration & Polish | 3-4 weeks | $15,000 |
+| **Phase 3** | Municipal CRM Module | 4-5 weeks | $22,000 |
+| **Phase 4** | Advanced Features & Guard Rails | 5-6 weeks | $25,000 |
+| **Phase 5** | Integration & Polish | 3-4 weeks | $15,000 |
 | **Total** | Full Platform (5 Modules) | 20-25 weeks | **$95,000** |
 
 ### Cost Comparison vs. Off-The-Shelf Solutions
@@ -170,7 +170,7 @@ pie title Total Investment by Phase
 
 ---
 
-### Phase 2A: Municipal CRM Module
+### Phase 3: Municipal CRM Module
 
 **Duration:** 4-5 weeks  
 **Investment:** $22,000  
@@ -229,7 +229,7 @@ pie title Total Investment by Phase
 
 ---
 
-### Phase 3: Advanced Features & Robust Guard Rails
+### Phase 4: Advanced Features & Robust Guard Rails
 
 **Duration:** 5-6 weeks  
 **Investment:** $25,000  
@@ -293,7 +293,7 @@ pie title Total Investment by Phase
 
 ---
 
-### Phase 4: Integration & Polish
+### Phase 5: Integration & Polish
 
 **Duration:** 3-4 weeks  
 **Investment:** $15,000  
@@ -498,17 +498,17 @@ xychart-beta
 | POC Completion (Phase 1) | $5,000 | Upon POC demo approval |
 | Phase 2 - 50% Upfront | $14,000 | Start of Phase 2 development |
 | Phase 2 - 50% Completion | $14,000 | MVP delivery and approval |
-| Phase 2A - 50% Upfront | $11,000 | Start of CRM development |
-| Phase 2A - 50% Completion | $11,000 | CRM delivery and approval |
-| Phase 3 - 50% Upfront | $12,500 | Start of Phase 3 development |
-| Phase 3 - 50% Completion | $12,500 | Feature delivery and approval |
-| Phase 4 - 50% Upfront | $7,500 | Start of Phase 4 development |
-| Phase 4 - Final Payment | $7,500 | Production go-live |
+| Phase 3 - 50% Upfront | $11,000 | Start of CRM development |
+| Phase 3 - 50% Completion | $11,000 | CRM delivery and approval |
+| Phase 4 - 50% Upfront | $12,500 | Start of Phase 4 development |
+| Phase 4 - 50% Completion | $12,500 | Feature delivery and approval |
+| Phase 5 - 50% Upfront | $7,500 | Start of Phase 5 development |
+| Phase 5 - Final Payment | $7,500 | Production go-live |
 | **Total** | **$95,000** | - |
 
 **Flexible Options:**
-- **Proposals Only (Phases 1-2, 3, 4):** $70,000 - Stop after proposals, add CRM later
-- **Proposals + CRM (Phases 1-2A):** $55,000 - Core platform foundation
+- **Proposals Only (Phases 1-2, 4-5):** $73,000 - Stop after proposals, add CRM later
+- **Proposals + CRM (Phases 1-3):** $55,000 - Core platform foundation
 - **Full Platform:** $95,000 - All 5 modules with complete integration
 
 **Option B: Net-30 Invoice Schedule**
@@ -518,12 +518,12 @@ xychart-beta
 | Invoice 1 | POC Completion | $5,000 | Net 30 |
 | Invoice 2 | Phase 2 Start | $14,000 | Net 30 |
 | Invoice 3 | Phase 2 Completion | $14,000 | Net 30 |
-| Invoice 4 | Phase 2A Start | $11,000 | Net 30 |
-| Invoice 5 | Phase 2A Completion | $11,000 | Net 30 |
-| Invoice 6 | Phase 3 Start | $12,500 | Net 30 |
-| Invoice 7 | Phase 3 Completion | $12,500 | Net 30 |
-| Invoice 8 | Phase 4 Start | $7,500 | Net 30 |
-| Invoice 9 | Phase 4 Go-Live | $7,500 | Net 30 |
+| Invoice 4 | Phase 3 Start | $11,000 | Net 30 |
+| Invoice 5 | Phase 3 Completion | $11,000 | Net 30 |
+| Invoice 6 | Phase 4 Start | $12,500 | Net 30 |
+| Invoice 7 | Phase 4 Completion | $12,500 | Net 30 |
+| Invoice 8 | Phase 5 Start | $7,500 | Net 30 |
+| Invoice 9 | Phase 5 Go-Live | $7,500 | Net 30 |
 | **Total** | | **$95,000** | |
 
 **Option C: Discounted Prepayment**
