@@ -1,6 +1,6 @@
-# ECI Construction - AI Proposal Manager POC Implementation Plan
+# ECI Construction - Unified Business Intelligence Platform POC
 
-**Project:** Non-Functional Proof of Concept  
+**Project:** Phase 1 - AI Proposal Manager (Non-Functional Proof of Concept)  
 **Client:** ECI Construction  
 **Created:** February 3, 2026  
 **Status:** Planning Phase  
@@ -9,6 +9,7 @@
 ---
 
 ## Table of Contents
+- [Strategic Vision](#strategic-vision)
 - [Overview](#overview)
 - [System Architecture](#system-architecture)
 - [Feature Set](#feature-set)
@@ -20,25 +21,92 @@
 
 ---
 
+## Strategic Vision
+
+### ECI's Complete Business Challenges & Platform Roadmap
+
+During our meeting, Ted identified **four critical pain points** that this platform will address:
+
+```mermaid
+mindmap
+  root((ECI Business Intelligence Platform))
+    Proposal Management
+      AI Content Generation
+      RFP Analysis
+      Historical Search
+      Cost Analytics
+      **Phase 1 POC - Feb 2026**
+    Resource Management
+      Staffing Allocation
+      Project Assignment
+      Capacity Planning
+      Utilization Tracking
+      **Phase 2 - Q2 2026**
+    Data Aggregation
+      Procore Integration
+      Financial Systems
+      Estimating Software
+      Unified Dashboard
+      **Phase 3 - Q3 2026**
+    Project Intelligence
+      Cost Tracking
+      Budget vs Actual
+      Timeline Analysis
+      Win/Loss Analytics
+      **Phase 4 - Q4 2026**
+```
+
+### Why Start with Proposals?
+
+**Immediate ROI:**
+- Ted spends 15+ hours/week on proposals (60 hrs/month)
+- CEO-level time valued at $200/hr = $12,000/month waste
+- 80% time reduction = **$115,200/year savings**
+- Fastest path to demonstrating AI value
+
+**Foundation for Expansion:**
+- Proposal data contains project types, budgets, timelines, resources
+- Natural bridge to resource allocation (who worked on what)
+- Historical cost data feeds into estimating and analytics
+- Common UI/UX patterns reusable across modules
+
+**Strategic Positioning:**
+- Differentiates from off-the-shelf proposal tools (Shred.ai, Unanet, Responsive)
+- Demonstrates custom platform capability
+- Shows integration potential with existing systems (Procore, financial software)
+- Validates AI approach before tackling more complex modules
+
+---
+
 ## Overview
 
-### Objective
-Build a non-functional proof of concept demonstrating the AI Proposal Manager's core capabilities using ECI Construction's historical proposal data. This POC will showcase:
+### POC Phase 1 Objective
+Build a non-functional proof of concept demonstrating the **AI Proposal Manager** module as the first component of ECI's unified business intelligence platform. This POC will showcase:
+
+**Primary Features (Proposal Management):**
 - Modern, professional UI comparable to enterprise SaaS tools
 - AI-powered proposal content generation
 - RFP analysis and extraction
 - Historical proposal search and retrieval
 - Cost/fee analytics based on past projects
 
+**Platform Vision Preview:**
+- Navigation structure showing future modules
+- Mockup of resource allocation dashboard (Phase 2 preview)
+- Integration points with Procore and financial systems
+- Unified design system applicable to all modules
+
 ### Scope
-**In Scope:**
+**In Scope for POC:**
 - ✅ Visual prototype with working UI components
 - ✅ Simulated AI responses using sample data
-- ✅ Interactive demonstrations of core workflows
-- ✅ Professional design system
+- ✅ Interactive demonstrations of proposal workflows
+- ✅ Professional design system for entire platform
 - ✅ Sample proposal library interface
 - ✅ RFP upload and analysis mockup
 - ✅ Cost analytics dashboard prototype
+- ✅ Navigation showing full platform vision
+- ✅ Preview mockups of future modules (staffing, data aggregation)
 
 **Out of Scope:**
 - ❌ Live AI API integration
@@ -46,10 +114,86 @@ Build a non-functional proof of concept demonstrating the AI Proposal Manager's 
 - ❌ User authentication system
 - ❌ Full backend development
 - ❌ Production deployment infrastructure
+- ❌ Actual system integrations (Procore, financial software)
 
 ---
 
 ## System Architecture
+
+### Platform-Wide Architecture Vision
+
+```mermaid
+graph TB
+    subgraph "User Interface Layer"
+        Nav[Unified Navigation]
+        Dashboard[Dashboard Home]
+        Proposals[Proposal Module]
+        Resources[Resource Management Module]
+        DataAgg[Data Aggregation Module]
+        Analytics[Project Intelligence Module]
+    end
+    
+    subgraph "Application Services"
+        API[API Gateway]
+        Auth[Authentication & RBAC]
+        Integration[Integration Hub]
+    end
+    
+    subgraph "AI & Intelligence"
+        AIEngine[AI Service Layer]
+        ProposalAI[Proposal AI]
+        PredictiveAI[Predictive Analytics]
+        NLP[Document Processing]
+    end
+    
+    subgraph "Data & Integration"
+        MainDB[(Central Database)]
+        Procore[Procore API]
+        Financial[Financial System]
+        Estimating[Estimating Software]
+        DocStore[(Document Storage)]
+    end
+    
+    Nav --> Dashboard
+    Nav --> Proposals
+    Nav --> Resources
+    Nav --> DataAgg
+    Nav --> Analytics
+    
+    Proposals --> API
+    Resources --> API
+    DataAgg --> API
+    Analytics --> API
+    
+    API --> Auth
+    API --> Integration
+    API --> AIEngine
+    
+    AIEngine --> ProposalAI
+    AIEngine --> PredictiveAI
+    AIEngine --> NLP
+    
+    Integration --> Procore
+    Integration --> Financial
+    Integration --> Estimating
+    
+    API --> MainDB
+    API --> DocStore
+    
+    style Proposals fill:#90EE90
+    style Resources fill:#FFE4B5
+    style DataAgg fill:#FFE4B5
+    style Analytics fill:#FFE4B5
+    
+    classDef phase1 fill:#90EE90
+    classDef future fill:#FFE4B5
+```
+
+**Legend:**
+- 🟢 Green: Phase 1 POC (Proposals) - Feb 2026
+- 🟡 Orange: Future Phases - Q2-Q4 2026
+
+### POC Architecture (Phase 1 Focus)
 
 ```mermaid
 flowchart TB
@@ -90,6 +234,89 @@ flowchart TB
     style AI fill:#FFB6C1
     style DB fill:#FFB6C1
     style Vector fill:#FFB6C1
+```
+
+### Module Integration Architecture (Full Platform)
+
+```mermaid
+graph LR
+    subgraph "Module 1: Proposals"
+        P1[Proposal Library]
+        P2[RFP Analysis]
+        P3[Content Generator]
+        P4[Cost Analytics]
+    end
+    
+    subgraph "Module 2: Resources"
+        R1[Staff Directory]
+        R2[Allocation Tool]
+        R3[Capacity Planning]
+        R4[Utilization Reports]
+    end
+    
+    subgraph "Module 3: Data Aggregation"
+        D1[Procore Connector]
+        D2[Financial Sync]
+        D3[Unified Dashboard]
+        D4[Real-time Updates]
+    end
+    
+    subgraph "Module 4: Project Intelligence"
+        I1[Cost Tracking]
+        I2[Budget Variance]
+        I3[Timeline Analysis]
+        I4[Predictive Analytics]
+    end
+    
+    subgraph "Shared Services"
+        S1[(Central Data Store)]
+        S2[AI Engine]
+        S3[Reporting Engine]
+    end
+    
+    P1 & P2 & P3 & P4 --> S1
+    R1 & R2 & R3 & R4 --> S1
+    D1 & D2 & D3 & D4 --> S1
+    I1 & I2 & I3 & I4 --> S1
+    
+    P3 --> S2
+    R3 --> S2
+    I4 --> S2
+    
+    P4 & R4 & D3 & I2 --> S3
+    
+    style P1 fill:#90EE90
+    style P2 fill:#90EE90
+    style P3 fill:#90EE90
+    style P4 fill:#90EE90
+```
+
+### Data Flow Across Modules
+
+```mermaid
+flowchart TD
+    A[User Creates Proposal] --> B[Proposal Data Captured]
+    B --> C{Cross-Module Impact}
+    
+    C --> D[Resources Module]
+    D --> E[Track: Who worked on proposal?]
+    E --> F[Update: Staff utilization metrics]
+    
+    C --> G[Analytics Module]
+    G --> H[Capture: Project type, budget, timeline]
+    H --> I[Update: Historical cost database]
+    
+    C --> J[Data Aggregation]
+    J --> K[Sync: With Procore if proposal won]
+    K --> L[Create: Project record in main DB]
+    
+    I --> M[Feed Predictive Models]
+    F --> M
+    L --> M
+    M --> N[Improve Future Estimates]
+    
+    style A fill:#90EE90
+    style B fill:#90EE90
 ```
 
 ---
@@ -440,9 +667,12 @@ graph LR
 
 ## Feature Set
 
-### 1. Proposal Library Dashboard
+### Phase 1 Features (POC - Fully Functional UI)
 
-**Status:** 🔵 Not Started
+#### 1. Proposal Library Dashboard
+
+**Status:** 🔵 Not Started  
+**Priority:** P0 - Critical
 
 ```mermaid
 graph LR
@@ -469,7 +699,7 @@ graph LR
 
 ---
 
-### 2. RFP Analysis Tool
+#### 2. RFP Analysis Tool
 
 **Status:** 🔵 Not Started
 
@@ -669,34 +899,213 @@ stateDiagram-v2
 
 ---
 
+### Future Module Previews (Visual Mockups Only in POC)
+
+#### 6. Resource Allocation Dashboard (Phase 2 Preview)
+
+**Status:** 🟡 Future - Mockup Only  
+**Referenced in Meeting:** Demonstrated via consulting firm project management tool
+
+```mermaid
+graph TB
+    subgraph "Resource Management Features"
+        A[Staff Directory]
+        B[Project Assignment]
+        C[Capacity Planning]
+        D[Utilization Dashboard]
+    end
+    
+    A --> E[Visual Staff Cards]
+    B --> F[Drag & Drop Allocation]
+    C --> G[Hiring Forecast]
+    D --> H[Utilization Charts]
+```
+
+**Preview Features to Mockup:**
+- Staff directory with photos and roles
+- Project allocation grid showing:
+  - Who is assigned to which projects
+  - Percentage allocation per project
+  - Available capacity per person
+  - Overallocation warnings
+- Visual utilization trends (similar to consulting firm demo)
+- Quick stats: Total staff, avg utilization, open capacity
+- Integration point with proposal data (show staff used on past proposals)
+
+**Ted's Pain Point:**
+> "We manually do staffing allocation in Excel... it's mom and pop versus being a little more refined in having a tool that does this."
+
+**Connection to Proposals:**
+- When proposal is won → automatically suggest team based on similar past projects
+- Historical data shows which staff worked on similar projects
+- Capacity planning informs whether ECI can take on new work
+
+---
+
+#### 7. Data Aggregation Dashboard (Phase 3 Preview)
+
+**Status:** 🟡 Future - Mockup Only  
+**Ted's Challenge:** "We have so many systems... they're kind of working in silos"
+
+```mermaid
+graph LR
+    subgraph "Integrated Systems"
+        P[Procore Projects]
+        F[Financial Data]
+        E[Estimating Software]
+        PP[Proposal Platform]
+    end
+    
+    subgraph "Unified View"
+        D[Executive Dashboard]
+    end
+    
+    P --> D
+    F --> D
+    E --> D
+    PP --> D
+    
+    D --> S1[Project Snapshot]
+    D --> S2[Financial Health]
+    D --> S3[Pipeline Status]
+```
+
+**Preview Features to Mockup:**
+- Executive dashboard showing:
+  - All active projects from Procore
+  - Budget vs actual from financial system
+  - Proposal pipeline status
+  - Staff allocation overview
+  - Cash flow projection
+- "Snapshot" view Ted mentioned: "I can't just go to one place and have a dashboard that tells me everything"
+- Mobile-friendly view (Ted mentioned needing access in truck)
+- Integration status indicators showing which systems are connected
+
+**Mock Data Points:**
+- 8-10 active projects
+- Budget vs actual variance
+- 5-6 proposals in pipeline
+- Staff utilization summary
+- Revenue projection chart
+
+---
+
+#### 8. Project Cost Intelligence (Phase 4 Preview)
+
+**Status:** 🟡 Future - Mockup Only  
+**Ted's Need:** "Building projections manually... what falls off when... different people in different systems"
+
+```mermaid
+graph TB
+    A[Historical Projects] --> B[Cost Database]
+    C[Active Projects] --> B
+    D[Proposals] --> B
+    
+    B --> E[Analytics Engine]
+    
+    E --> F[Cost Trends]
+    E --> G[Budget Variance]
+    E --> H[Predictive Models]
+    E --> I[Fee Optimization]
+```
+
+**Preview Features to Mockup:**
+- Historical cost analytics (already in proposals module, expanded here)
+- Budget vs actual tracking for active projects
+- Project profitability analysis
+- Fee recommendation engine:
+  - Input: Project type, budget range
+  - Output: Recommended fee % based on historical data
+  - Comparison: "Similar projects averaged 11.2% fee"
+- Timeline prediction based on past projects
+- Risk indicators (projects trending over budget)
+
+**Ted's Quote:**
+> "For $1M to $5M projects, what were our average fees, average time? We could manually enter all that stuff, but there's a better way."
+
+**Connection to Other Modules:**
+- Uses proposal data for historical fees
+- Integrates with Procore for active project costs
+- Informs resource allocation (profitable projects get priority)
+
+---
+
+### Platform Navigation Preview
+
+**POC Will Include:**
+- Full navigation sidebar showing all modules (even if not built yet)
+- Dashboard home page with:
+  - Module cards for each of the 4 major areas
+  - "Coming Soon" badges on future modules
+  - Quick access to Phase 1 proposal features
+- Breadcrumb navigation
+- User profile menu (mockup only)
+
+**Navigation Structure:**
+```
+🏠 Dashboard Home
+📄 Proposals
+   ├─ Library
+   ├─ RFP Analysis
+   ├─ Content Generator
+   ├─ Analytics
+   └─ New Proposal Wizard
+   
+👥 Resources (Coming Soon)
+   ├─ Staff Directory
+   ├─ Project Allocation
+   ├─ Capacity Planning
+   └─ Utilization Reports
+   
+🔗 Data Hub (Coming Soon)
+   ├─ Executive Dashboard
+   ├─ Procore Integration
+   ├─ Financial Integration
+   └─ System Settings
+   
+📊 Project Intelligence (Coming Soon)
+   ├─ Cost Tracking
+   ├─ Budget Analysis
+   ├─ Timeline Insights
+   └─ Predictive Analytics
+   
+⚙️ Settings
+   ├─ Profile
+   ├─ Integrations
+   └─ Preferences
+```
+
+---
+
 ## Implementation Phases
 
-### Phase 1: Foundation & Setup (Days 1-2)
+### Phase 1: Foundation & Platform Setup (Days 1-2)
 **Status:** 🔵 Not Started
 
 **Tasks:**
 - [ ] Set up Next.js project with TypeScript
 - [ ] Configure Tailwind CSS
 - [ ] Install UI component library (shadcn/ui)
-- [ ] Set up project structure
-- [ ] Create mock data generator
+- [ ] Set up project structure for multi-module platform
+- [ ] Create mock data generator for all modules
 - [ ] Design system setup (colors, typography, spacing)
 - [ ] Create reusable component library
+- [ ] Build platform navigation structure
+- [ ] Create dashboard home page with module cards
 
 **Deliverables:**
 - Working development environment
 - Basic component library
-- Mock data structure
+- Mock data structure for proposals + future modules
 - Design system documentation
+- Platform navigation skeleton
 
 ---
 
-### Phase 2: Core UI Development (Days 3-5)
+### Phase 2: Core Proposal Features (Days 3-5)
 **Status:** 🔵 Not Started
 
 **Tasks:**
-- [ ] Build navigation layout
-- [ ] Create dashboard homepage
 - [ ] Implement Proposal Library view
   - [ ] Grid/list toggle
   - [ ] Filter sidebar
@@ -706,40 +1115,73 @@ stateDiagram-v2
 - [ ] Build RFP upload interface
 - [ ] Create analysis results display
 - [ ] Develop content generator form
+- [ ] Integrate simulated AI responses
 
 **Deliverables:**
 - Functional navigation
 - Interactive proposal library
 - Upload interface
 - Content generation UI
+- Working demo flow for proposal creation
 
 ---
 
-### Phase 3: Advanced Features (Days 6-8)
+### Phase 3: Analytics & Future Module Previews (Days 6-8)
 **Status:** 🔵 Not Started
 
 **Tasks:**
-- [ ] Build cost analytics dashboard
+- [ ] Build cost analytics dashboard (fully functional)
   - [ ] Filter controls
-  - [ ] Chart components (using Chart.js or Recharts)
+  - [ ] Chart components (using Recharts)
   - [ ] Data table
   - [ ] Statistics cards
 - [ ] Create proposal builder wizard
   - [ ] Multi-step form
   - [ ] Progress tracking
   - [ ] Section editor
-- [ ] Implement preview/export functionality
-- [ ] Add sample data integration
+- [ ] Build future module mockups:
+  - [ ] Resource allocation dashboard (visual only)
+  - [ ] Data aggregation dashboard (visual only)
+  - [ ] Project intelligence preview (visual only)
+- [ ] Add "Coming Soon" states and tooltips
+- [ ] Create integration connection indicators
 
 **Deliverables:**
 - Working analytics dashboard
 - Proposal wizard flow
 - Preview system
 - Export mockup
+- Visual mockups of all 4 platform modules
 
 ---
 
-### Phase 4: Polish & Demo Prep (Days 9-10)
+### Phase 4: Polish, Platform Integration & Demo Prep (Days 9-10)
+**Status:** 🔵 Not Started
+
+**Tasks:**
+- [ ] Refine all animations and transitions
+- [ ] Add loading states and skeletons
+- [ ] Implement error states and empty states
+- [ ] Optimize mobile responsiveness across all views
+- [ ] Add contextual help tooltips explaining future features
+- [ ] Create demo script covering:
+  - [ ] Proposal workflow (primary)
+  - [ ] Platform vision walkthrough (future modules)
+  - [ ] Integration strategy explanation
+- [ ] Prepare sample scenarios for each pain point
+- [ ] Record demo video (optional)
+- [ ] Create presentation deck with:
+  - [ ] Platform roadmap timeline
+  - [ ] Module-by-module ROI breakdown
+  - [ ] vs. Off-the-shelf comparison
+  - [ ] Integration architecture
+
+**Deliverables:**
+- Polished UI with smooth interactions across entire platform
+- Demo-ready application showing all 4 modules (1 functional, 3 preview)
+- Presentation materials emphasizing unified platform value
+- User guide documentation
+- Platform roadmap document
 **Status:** 🔵 Not Started
 
 **Tasks:**
@@ -1276,19 +1718,25 @@ gantt
 ### Key Milestones
 
 **Milestone 1: Week 1 Review (Feb 7)**
-- ✅ Core UI components built
+- ✅ Platform navigation and home page complete
+- ✅ Core proposal UI components built
 - ✅ Proposal library functional
 - ✅ RFP upload interface complete
+- ✅ Future module navigation visible
 
 **Milestone 2: Demo Ready (Feb 14)**
-- ✅ All features implemented
-- ✅ Mock data integrated
+- ✅ All proposal features fully implemented
+- ✅ Future module mockups created
+- ✅ Mock data integrated across platform
 - ✅ UI polished and responsive
+- ✅ Platform vision clearly communicated
 
 **Milestone 3: Client Presentation (Feb 17)**
-- ✅ Demo rehearsed
-- ✅ Presentation materials ready
+- ✅ Demo script covering all 4 business pain points
+- ✅ Presentation materials showing platform roadmap
+- ✅ ROI analysis for each module
 - ✅ Feedback collection plan
+- ✅ Phase 2 proposal ready
 
 ---
 
@@ -1300,12 +1748,43 @@ gantt
 - [ ] No console errors or warnings
 - [ ] Smooth animations (60fps)
 - [ ] Fast load times (<2s initial load)
+- [ ] Platform navigation seamlessly connects all modules
 
 ### Design Success
 - [ ] Matches reference quality (enterprise SaaS level)
-- [ ] Consistent design system applied throughout
+- [ ] Consistent design system applied throughout entire platform
 - [ ] Accessible (keyboard nav, screen readers)
 - [ ] Professional color scheme and typography
+- [ ] Future modules visually distinguished but integrated
+
+### Demo Success - Proposal Module
+- [ ] Can demonstrate all 5 core proposal features
+- [ ] Sample data is realistic and relevant to ECI
+- [ ] User flows are intuitive
+- [ ] Simulated AI responses are convincing
+- [ ] Client can visualize production version
+
+### Demo Success - Platform Vision
+- [ ] Navigation clearly shows all 4 modules addressing Ted's pain points:
+  - [ ] ✅ Proposal Management (working)
+  - [ ] 🔜 Resource Allocation (mockup)
+  - [ ] 🔜 Data Aggregation (mockup)
+  - [ ] 🔜 Project Intelligence (mockup)
+- [ ] Each pain point from meeting is addressed by a specific module
+- [ ] Integration points with Procore/financial systems are clear
+- [ ] Roadmap shows logical build sequence
+- [ ] Value proposition demonstrates why custom > off-the-shelf
+
+### Business Success
+- [ ] Ted Johnson and team are impressed with proposal module
+- [ ] **Ted sees the platform vision addressing all 4 pain points**
+- [ ] Clear differentiation from off-the-shelf proposal-only solutions
+- [ ] Cost/value proposition is evident for full platform
+- [ ] Team understands how modules work together
+- [ ] Team is eager to move to Phase 2 (production proposal module)
+- [ ] **ECI can envision phases 3-4 (resource management, data aggregation)**
+- [ ] Positioning vs. competitors (Shred.ai, Unanet, Responsive) is clear
+- [ ] Integration strategy resonates (vs. multiple vendor silos)
 
 ### Demo Success
 - [ ] Can demonstrate all 5 core features
