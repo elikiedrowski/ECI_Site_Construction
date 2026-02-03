@@ -87,6 +87,13 @@ mindmap
 - Historical cost data feeds into estimating and analytics
 - Common UI/UX patterns reusable across modules
 
+**Institutional Knowledge Preservation:**
+- Captures Ted's 20+ years of recreation construction expertise
+- Preserves "tribal knowledge" for succession planning
+- Ensures consistency even as team members change
+- Protects against knowledge loss (estimated $100K+ value)
+- **Ted's pain point:** "90% of proposal content already exists but takes hours to locate"
+
 **Strategic Positioning:**
 - Differentiates from off-the-shelf proposal tools (Shred.ai, Unanet, Responsive)
 - Demonstrates custom platform capability
@@ -867,6 +874,11 @@ graph TB
   - Average fee percentage
   - Typical project duration
   - Most successful project type
+- **Estimate Validation (Preview in POC):**
+  - Fee recommendation based on historical data
+  - Warning if fee % is significantly below historical average
+  - Alert if project duration estimate seems unrealistic
+  - "Sanity check" comparison to similar projects
 - Export to Excel
 
 ---
@@ -1098,6 +1110,12 @@ graph TB
 - Historical cost analytics (already in proposals module, expanded here)
 - Budget vs actual tracking for active projects
 - Project profitability analysis
+- **Estimate Guard Rails & Validation:**
+  - Prevent missing labor costs in proposals
+  - Flag pricing errors before submission
+  - Automated checks: "Did you include prevailing wage?"
+  - Alert if estimate significantly deviates from historical patterns
+  - **Custom validation rules** specific to ECI's recreation construction workflow
 - Fee recommendation engine:
   - Input: Project type, budget range
   - Output: Recommended fee % based on historical data
@@ -1107,6 +1125,11 @@ graph TB
 
 **Ted's Quote:**
 > "For $1M to $5M projects, what were our average fees, average time? We could manually enter all that stuff, but there's a better way."
+
+**Custom Solution Advantage:**
+- Off-the-shelf tools lack industry-specific validation rules
+- ECI-specific guard rails prevent costly estimation errors
+- Tailored to recreation construction unique requirements (LEED, prevailing wage, safety compliance)
 
 **Connection to Other Modules:**
 - Uses proposal data for historical fees
@@ -1873,6 +1896,8 @@ gantt
 - [ ] Positioning vs. competitors (Shred.ai, Unanet, Responsive) is clear
 - [ ] Integration strategy resonates (vs. multiple vendor silos)
 - [ ] **CRM for municipal project tracking resonates with Ted's long-cycle sales process**
+- [ ] **Institutional knowledge preservation value is clear** (succession planning, tribal knowledge retention)
+- [ ] **Estimate validation & guard rails** demonstrate custom solution advantages over off-the-shelf
 
 ### Demo Success
 - [ ] Can demonstrate all 5 core proposal features
