@@ -30,18 +30,20 @@ The initial system will replace manual proposal processes, reduce CEO time spent
 ```mermaid
 pie title Total Investment by Phase
     "Phase 1: POC" : 5000
-    "Phase 2: MVP Core" : 28000
-    "Phase 3: Advanced Features" : 22000
+    "Phase 2: Proposal MVP" : 28000
+    "Phase 2A: Municipal CRM" : 22000
+    "Phase 3: Advanced Features" : 25000
     "Phase 4: Integration & Polish" : 15000
 ```
 
 | Phase | Deliverable | Timeline | Investment |
 |-------|-------------|----------|------------|
 | **Phase 1** | Non-Functional POC | 2 weeks | $5,000 |
-| **Phase 2** | MVP with Core Features | 6-8 weeks | $28,000 |
-| **Phase 3** | Advanced Features | 4-6 weeks | $22,000 |
+| **Phase 2** | Proposal MVP (Core Features) | 6-8 weeks | $28,000 |
+| **Phase 2A** | Municipal CRM Module | 4-5 weeks | $22,000 |
+| **Phase 3** | Advanced Features & Guard Rails | 5-6 weeks | $25,000 |
 | **Phase 4** | Integration & Polish | 3-4 weeks | $15,000 |
-| **Total** | Full Production System | 15-20 weeks | **$70,000** |
+| **Total** | Full Platform (5 Modules) | 20-25 weeks | **$95,000** |
 
 ### Cost Comparison vs. Off-The-Shelf Solutions
 
@@ -50,11 +52,15 @@ pie title Total Investment by Phase
 | **OpenAsset Shred.ai** | $15,000 | $15,000 | $15,000 | **$45,000** |
 | **Unanet Proposal AI** | $12,500 | $12,500 | $12,500 | **$37,500** |
 | **Responsive** | $12,500 | $12,500 | $12,500 | **$37,500** |
-| **Custom Solution** | $70,000 | $3,000 | $3,000 | **$76,000** |
+| **Custom Solution (Proposals Only)** | $70,000 | $3,000 | $3,000 | **$76,000** |
+| **Custom Platform (All 5 Modules)** | $95,000 | $3,500 | $3,500 | **$102,000** |
 
-**Break-even Point:** Month 28 (vs. most expensive option)  
-**5-Year Savings:** $45,000 - $105,000 vs. off-the-shelf solutions  
-**10-Year Savings:** $120,000 - $180,000 vs. off-the-shelf solutions
+**Note:** Off-the-shelf solutions only address proposal management. ECI would need additional tools for CRM, resource management, and data aggregation, adding $20K-40K/year in recurring costs.
+
+**Break-even Point (Proposals Only):** Month 28 vs. Shred.ai  
+**Break-even Point (Full Platform):** Month 32 vs. multiple vendor solution  
+**5-Year Savings (Full Platform):** $85,000 - $145,000 vs. vendor silos  
+**10-Year Savings (Full Platform):** $210,000 - $310,000 vs. vendor silos
 
 ---
 
@@ -164,10 +170,69 @@ pie title Total Investment by Phase
 
 ---
 
-### Phase 3: Advanced Features
+### Phase 2A: Municipal CRM Module
 
-**Duration:** 4-6 weeks  
+**Duration:** 4-5 weeks  
 **Investment:** $22,000  
+**Team:** Lead Developer + Developer  
+**Can Run Parallel with Phase 2 or Sequential**
+
+**Deliverables:**
+
+**1. Municipal Project Pipeline**
+- Project tracking from early design through RFP
+- Status workflow: Planning → Design → Pre-RFP → Active RFP → Won/Lost
+- Estimated RFP date and project value tracking
+- Visual pipeline dashboard (kanban or list view)
+- Quick filters by status, municipality, project type
+
+**2. Touch Point Management**
+- Activity timeline for each municipal project
+- Log meetings, calls, emails, site visits
+- Next action reminders and follow-up tracking
+- Relationship strength indicators
+- Key decision-maker contact database
+
+**3. Municipal Database**
+- Cities/counties relationship tracker
+- Procurement contact management
+- Historical project data by municipality
+- Win rate analysis by municipality
+- Preferred contractor lists tracking
+
+**4. Alerts & Automation**
+- "Design phase starting - schedule touch-point" alerts
+- "90 days until estimated RFP" notifications
+- "No contact in 60 days" relationship risk warnings
+- Email integration for automated activity logging
+- Calendar integration for follow-up scheduling
+
+**5. CRM-Proposal Integration**
+- When project moves to RFP, pull relationship context into proposal module
+- Historical interaction summary auto-populated
+- Key stakeholder preferences accessible
+- Win/loss data informs proposal strategy
+
+**Ted's Exact Requirement:**
+> "Frankly – we should also think about a simple CRM platform – we don't need anything crazy there either. Again, most of our work is municipal, gets advertised, etc. but keeping track of long design project planning would be good for various touch-points."
+
+**Hourly Breakdown:**
+| Role | Hours | Rate | Subtotal |
+|------|-------|------|----------|
+| Lead Developer | 60 | $150 | $9,000 |
+| Developer | 90 | $100 | $9,000 |
+| UI/UX Design | 20 | $125 | $2,500 |
+| QA/Testing | 15 | $90 | $1,350 |
+| **Total** | **185** | - | **$21,850** |
+
+**Fixed Price:** $22,000
+
+---
+
+### Phase 3: Advanced Features & Robust Guard Rails
+
+**Duration:** 5-6 weeks  
+**Investment:** $25,000  
 **Team:** Lead Developer + Developer
 
 **Deliverables:**
@@ -216,13 +281,15 @@ pie title Total Investment by Phase
 **Hourly Breakdown:**
 | Role | Hours | Rate | Subtotal |
 |------|-------|------|----------|
-| Lead Developer | 70 | $150 | $10,500 |
-| Developer | 80 | $100 | $8,000 |
-| AI Prompt Engineering | 15 | $150 | $2,250 |
-| QA/Testing | 15 | $90 | $1,350 |
-| **Total** | **180** | - | **$22,100** |
+| Lead Developer | 80 | $150 | $12,000 |
+| Developer | 90 | $100 | $9,000 |
+| AI Prompt Engineering | 20 | $150 | $3,000 |
+| QA/Testing | 20 | $90 | $1,800 |
+| **Total** | **210** | - | **$25,800** |
 
-**Fixed Price:** $22,000
+**Fixed Price:** $25,000
+
+**Note:** Increased from original $22K to accommodate comprehensive estimate guard rails system with ECI-specific validation rules, compliance checks, and custom warning logic.
 
 ---
 
@@ -306,11 +373,14 @@ gantt
     section Phase 1: POC
     POC Development           :p1, 2026-02-03, 2w
     
-    section Phase 2: MVP
-    Core Development         :p2, after p1, 7w
+    section Phase 2: Proposals
+    Proposal MVP             :p2, after p1, 7w
+    
+    section Phase 2A: CRM
+    Municipal CRM            :p2a, after p1, 5w
     
     section Phase 3: Advanced
-    Advanced Features        :p3, after p2, 5w
+    Advanced Features        :p3, after p2, 6w
     
     section Phase 4: Integration
     Integration & Launch     :p4, after p3, 4w
@@ -320,9 +390,10 @@ gantt
 |-------|-------------|---------------------|-----------|
 | Phase 1 | 40 | 20 | 2 |
 | Phase 2 | 235 | 33 | 2-3 |
-| Phase 3 | 180 | 36 | 2 |
+| Phase 2A | 185 | 37 | 2 |
+| Phase 3 | 210 | 35 | 2 |
 | Phase 4 | 110 | 28 | 2 |
-| **Total** | **565** | **31 avg** | **2-3** |
+| **Total** | **780** | **33 avg** | **2-3** |
 
 ### Infrastructure & Third-Party Costs (Estimated Annual)
 
@@ -366,12 +437,14 @@ gantt
 xychart-beta
     title "Cumulative Cost Comparison (5 Years)"
     x-axis [Year 1, Year 2, Year 3, Year 4, Year 5]
-    y-axis "Cost ($)" 0 --> 150000
-    line "Custom Solution" [70000, 73000, 76000, 79000, 82000]
-    line "Shred.ai" [15000, 30000, 45000, 60000, 75000]
-    line "Unanet" [12500, 25000, 37500, 50000, 62500]
+    y-axis "Cost ($)" 0 --> 160000
+    line "Custom Platform (All 5 Modules)" [95000, 98500, 102000, 105500, 109000]
+    line "Custom (Proposals Only)" [70000, 73000, 76000, 79000, 82000]
+    line "Shred.ai + Other Vendors" [35000, 70000, 105000, 140000, 175000]
+    line "Shred.ai Only" [15000, 30000, 45000, 60000, 75000]
 ```
 
+**Proposals Only Investment:**
 | Metric | Value |
 |--------|-------|
 | **Initial Investment** | $70,000 |
@@ -380,6 +453,17 @@ xychart-beta
 | **Year 1 Net Benefit** | $45,200 |
 | **3-Year Net Benefit** | $270,600 |
 | **5-Year Net Benefit** | $456,000 |
+
+**Full Platform Investment (All 5 Modules):**
+| Metric | Value |
+|--------|-------|
+| **Initial Investment** | $95,000 |
+| **Monthly Time Savings Value** | $12,000+ |
+| **Payback Period** | 8 months |
+| **Year 1 Net Benefit** | $49,000 |
+| **3-Year Net Benefit** | $334,000 |
+| **5-Year Net Benefit** | $566,000 |
+| **vs. Multiple Vendor Silos** | Saves $210K+ over 5 years |
 
 ### Competitive Advantage Benefits
 
@@ -414,11 +498,18 @@ xychart-beta
 | POC Completion (Phase 1) | $5,000 | Upon POC demo approval |
 | Phase 2 - 50% Upfront | $14,000 | Start of Phase 2 development |
 | Phase 2 - 50% Completion | $14,000 | MVP delivery and approval |
-| Phase 3 - 50% Upfront | $11,000 | Start of Phase 3 development |
-| Phase 3 - 50% Completion | $11,000 | Feature delivery and approval |
+| Phase 2A - 50% Upfront | $11,000 | Start of CRM development |
+| Phase 2A - 50% Completion | $11,000 | CRM delivery and approval |
+| Phase 3 - 50% Upfront | $12,500 | Start of Phase 3 development |
+| Phase 3 - 50% Completion | $12,500 | Feature delivery and approval |
 | Phase 4 - 50% Upfront | $7,500 | Start of Phase 4 development |
 | Phase 4 - Final Payment | $7,500 | Production go-live |
-| **Total** | **$70,000** | - |
+| **Total** | **$95,000** | - |
+
+**Flexible Options:**
+- **Proposals Only (Phases 1-2, 3, 4):** $70,000 - Stop after proposals, add CRM later
+- **Proposals + CRM (Phases 1-2A):** $55,000 - Core platform foundation
+- **Full Platform:** $95,000 - All 5 modules with complete integration
 
 **Option B: Net-30 Invoice Schedule**
 
@@ -427,14 +518,18 @@ xychart-beta
 | Invoice 1 | POC Completion | $5,000 | Net 30 |
 | Invoice 2 | Phase 2 Start | $14,000 | Net 30 |
 | Invoice 3 | Phase 2 Completion | $14,000 | Net 30 |
-| Invoice 4 | Phase 3 Start | $11,000 | Net 30 |
-| Invoice 5 | Phase 3 Completion | $11,000 | Net 30 |
-| Invoice 6 | Phase 4 Start | $7,500 | Net 30 |
-| Invoice 7 | Phase 4 Go-Live | $7,500 | Net 30 |
+| Invoice 4 | Phase 2A Start | $11,000 | Net 30 |
+| Invoice 5 | Phase 2A Completion | $11,000 | Net 30 |
+| Invoice 6 | Phase 3 Start | $12,500 | Net 30 |
+| Invoice 7 | Phase 3 Completion | $12,500 | Net 30 |
+| Invoice 8 | Phase 4 Start | $7,500 | Net 30 |
+| Invoice 9 | Phase 4 Go-Live | $7,500 | Net 30 |
+| **Total** | | **$95,000** | |
 
 **Option C: Discounted Prepayment**
 
-- Full project payment upfront: **$66,500** (5% discount)
+- Full platform payment upfront: **$90,250** (5% discount)
+- Proposals only prepayment: **$66,500** (5% discount)
 - Payment due: Start of Phase 2
 - Risk mitigation: Escrow arrangement available
 
