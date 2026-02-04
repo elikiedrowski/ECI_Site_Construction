@@ -7,6 +7,12 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'ECI Business Intelligence Platform',
   description: 'AI-Powered Business Intelligence Platform for ECI Construction',
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon.png', type: 'image/png', sizes: '64x64' },
+    ],
+  },
 }
 
 export default function RootLayout({

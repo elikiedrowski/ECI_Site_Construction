@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Sidebar } from '@/components/sidebar';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { CheckCircle2, Circle, Upload, FileText, Sparkles, Eye, Download } from 'lucide-react';
@@ -71,8 +72,12 @@ export default function ProposalWizardPage() {
   };
 
   return (
-    <div className="p-8 max-w-6xl mx-auto space-y-6">
-      <div>
+    <div className="flex h-screen bg-gray-50">
+      <Sidebar />
+      
+      <main className="flex-1 overflow-y-auto">
+        <div className="p-8 max-w-6xl mx-auto space-y-6">
+          <div>
         <h1 className="text-3xl font-bold text-gray-900">New Proposal Wizard</h1>
         <p className="text-gray-500 mt-1">Step-by-step guided proposal creation</p>
       </div>
@@ -359,7 +364,7 @@ export default function ProposalWizardPage() {
                     <h2 className="text-2xl font-bold text-gray-900 mb-2">{projectName}</h2>
                     <p className="text-gray-600">Proposal submitted to {client}</p>
                   </div>
-                  {sections.filter(s => s.selected).map((section) => (
+                  {selectedSections.filter(s => s.selected).map((section) => (
                     <div key={section.id} className="bg-white p-4 rounded border border-gray-200">
                       <h3 className="font-semibold text-gray-900 mb-2">{section.name}</h3>
                       <p className="text-sm text-gray-600">
@@ -442,6 +447,8 @@ export default function ProposalWizardPage() {
           </Button>
         </div>
       </div>
+        </div>
+      </main>
     </div>
   );
 }

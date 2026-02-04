@@ -1,9 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import Image from "next/image"
 import { cn } from "@/lib/utils"
 import {
   LayoutDashboard,
@@ -74,36 +73,41 @@ export function Sidebar() {
     )
   }
 
+  // Auto-expand parent menu if we're on a child page
+  useEffect(() => {
+    navigation.forEach((item) => {
+      if (item.children) {
+        const isOnChildPage = item.children.some(child => pathname === child.href)
+        if (isOnChildPage && !expandedItems.includes(item.name)) {
+          setExpandedItems(prev => [...prev, item.name])
+        }
+      }
+    })
+  }, [pathname])
+
   return (
     <div className={cn(
       "flex h-screen flex-col border-r bg-white transition-all duration-300",
       isCollapsed ? "w-16" : "w-64"
     )}>
       {/* Logo/Header */}
-      <div className="flex h-16 items-center border-b px-4 justify-between">
-        <div className="flex items-center gap-3 flex-1 min-w-0">
-          {isCollapsed ? (
-            <Image
-              src="/eci-logo-compact.svg"
-              alt="ECI Logo"
-              width={40}
-              height={40}
-              className="flex-shrink-0"
-            />
-          ) : (
-            <Image
-              src="/eci-logo.svg"
-              alt="ECI Site Construction Management"
-              width={120}
-              height={50}
-              className="flex-shrink-0"
-              priority
-            />
+      <div className="flex h-16 items-center justify-between border-b bg-white px-4">
+        <div className="flex flex-1 items-center min-w-0">
+          <div
+            className={cn(
+              "text-sm font-semibold tracking-tight text-gray-900",
+              isCollapsed && "sr-only"
+            )}
+          >
+            ECI Platform
+          </div>
+          {isCollapsed && (
+            <div className="text-sm font-semibold tracking-tight text-gray-900">ECI</div>
           )}
         </div>
         <button
           onClick={() => setIsCollapsed(!isCollapsed)}
-          className="p-2 rounded-lg hover:bg-gray-100 transition-colors flex-shrink-0"
+          className="flex-shrink-0 rounded-lg p-2 text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900"
           aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
         >
           {isCollapsed ? <ChevronRight className="h-5 w-5" /> : <ChevronLeft className="h-5 w-5" />}

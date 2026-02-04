@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Sidebar } from '@/components/sidebar';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { BarChart3, TrendingUp, Download, AlertCircle } from 'lucide-react';
@@ -65,8 +66,12 @@ export default function AnalyticsPage() {
   });
 
   return (
-    <div className="p-8 space-y-6">
-      <div className="flex items-center justify-between">
+    <div className="flex h-screen bg-gray-50">
+      <Sidebar />
+      
+      <main className="flex-1 overflow-y-auto">
+        <div className="p-8 space-y-6">
+          <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Proposal Analytics</h1>
           <p className="text-gray-500 mt-1">Historical trends and performance metrics</p>
@@ -336,6 +341,8 @@ export default function AnalyticsPage() {
           </div>
         </CardContent>
       </Card>
+        </div>
+      </main>
     </div>
   );
 }

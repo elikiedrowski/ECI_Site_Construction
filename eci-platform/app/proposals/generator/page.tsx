@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Sidebar } from '@/components/sidebar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { FileText, Sparkles, Copy, Check } from 'lucide-react';
@@ -279,8 +280,12 @@ export default function ContentGeneratorPage() {
   };
 
   return (
-    <div className="p-8 space-y-6">
-      <div className="flex items-center justify-between">
+    <div className="flex h-screen bg-gray-50">
+      <Sidebar />
+      
+      <main className="flex-1 overflow-y-auto">
+        <div className="p-8 space-y-6">
+          <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">AI Content Generator</h1>
           <p className="text-gray-500 mt-1">Generate professional proposal sections instantly</p>
@@ -480,6 +485,8 @@ export default function ContentGeneratorPage() {
           </div>
         </CardContent>
       </Card>
+        </div>
+      </main>
     </div>
   );
 }
