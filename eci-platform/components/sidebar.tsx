@@ -38,25 +38,21 @@ const navigation = [
     name: "ECI CRM",
     href: "/crm",
     icon: Building2,
-    badge: "Coming Soon",
   },
   {
     name: "Resources",
     href: "/resources",
     icon: Users,
-    badge: "Coming Soon",
   },
   {
     name: "Data Aggregation",
     href: "/data",
     icon: Database,
-    badge: "Coming Soon",
   },
   {
     name: "Project Intelligence",
     href: "/intelligence",
     icon: BarChart3,
-    badge: "Coming Soon",
   },
 ]
 
