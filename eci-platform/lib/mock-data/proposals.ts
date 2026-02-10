@@ -37,7 +37,7 @@ export function generateMockProposals(count: number = 20): Proposal[] {
   return Array.from({ length: count }, (_, i) => {
     const projectType = faker.helpers.arrayElement(projectTypes)
     const budget = faker.number.int({ min: 500000, max: 15000000 })
-    const feePercentage = faker.number.float({ min: 8, max: 15, precision: 0.1 })
+    const feePercentage = faker.number.float({ min: 8, max: 15, fractionDigits: 1 })
     const fee = Math.round((budget * feePercentage) / 100)
     
     return {
