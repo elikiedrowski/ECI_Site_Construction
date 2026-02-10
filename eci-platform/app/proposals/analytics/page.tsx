@@ -221,7 +221,7 @@ export default function AnalyticsPage() {
                   cx="50%"
                   cy="50%"
                   labelLine={false}
-                  label={({ type, winRate }) => `${type}: ${winRate}%`}
+                  label={(props: any) => `${props.type}: ${props.winRate}%`}
                   outerRadius={100}
                   fill="#8884d8"
                   dataKey="winRate"
