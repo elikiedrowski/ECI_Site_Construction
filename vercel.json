@@ -1,6 +1,0 @@
-{
-  "buildCommand": "cd eci-platform && npm run build",
-  "devCommand": "cd eci-platform && npm run dev",
-  "installCommand": "cd eci-platform && npm install",
-  "outputDirectory": "eci-platform/.next"
-}
