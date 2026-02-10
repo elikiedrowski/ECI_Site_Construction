@@ -147,13 +147,12 @@ export function Sidebar() {
                 </button>
               ) : (
                 <Link
-                  href={item.badge ? "#" : item.href}
+                  href={item.href}
                   className={cn(
                     "group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
                     isActive
                       ? "bg-gray-100 text-gray-900"
-                      : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
-                    item.badge && "cursor-not-allowed opacity-60"
+                      : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                   )}
                   title={isCollapsed ? item.name : undefined}
                 >
@@ -161,9 +160,6 @@ export function Sidebar() {
                   {!isCollapsed && (
                     <>
                       <span className="flex-1">{item.name}</span>
-                      {item.badge && (
-                        <span className="text-xs text-gray-400">{item.badge}</span>
-                      )}
                     </>
                   )}
                 </Link>
