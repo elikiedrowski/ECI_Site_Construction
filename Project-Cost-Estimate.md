@@ -73,6 +73,7 @@ pie title Total Investment by Phase
 **Team:** 1 Lead Developer + 1 UI Developer
 
 **Deliverables:**
+
 - ✅ Professional UI prototype (enterprise SaaS quality)
 - ✅ Interactive mockup of all core proposal features
 - ✅ Platform navigation showing all 5 future modules:
@@ -87,6 +88,7 @@ pie title Total Investment by Phase
 - ✅ Production roadmap for full platform expansion
 
 **Hourly Breakdown:**
+
 | Role | Hours | Rate | Subtotal |
 |------|-------|------|----------|
 | Lead Developer (Eli) | 25 | $150 | $3,750 |
@@ -96,6 +98,7 @@ pie title Total Investment by Phase
 **Discounted POC Price:** $5,000 (includes meeting time and revisions)
 
 **Success Criteria:**
+
 - Demonstrate clear value proposition vs. off-the-shelf solutions
 - Achieve client approval to proceed to Phase 2
 - Validate technical approach and design direction
@@ -157,6 +160,7 @@ pie title Total Investment by Phase
 - Mobile-friendly
 
 **Hourly Breakdown:**
+
 | Role | Hours | Rate | Subtotal |
 |------|-------|------|----------|
 | Lead Developer | 80 | $150 | $12,000 |
@@ -214,9 +218,11 @@ pie title Total Investment by Phase
 - Win/loss data informs proposal strategy
 
 **Ted's Exact Requirement:**
+
 > "Frankly – we should also think about a simple CRM platform – we don't need anything crazy there either. Again, most of our work is municipal, gets advertised, etc. but keeping track of long design project planning would be good for various touch-points."
 
 **Hourly Breakdown:**
+
 | Role | Hours | Rate | Subtotal |
 |------|-------|------|----------|
 | Lead Developer | 60 | $150 | $9,000 |
@@ -279,6 +285,7 @@ pie title Total Investment by Phase
 - Cover page customization
 
 **Hourly Breakdown:**
+
 | Role | Hours | Rate | Subtotal |
 |------|-------|------|----------|
 | Lead Developer | 80 | $150 | $12,000 |
@@ -339,6 +346,7 @@ pie title Total Investment by Phase
 - Go-live support
 
 **Hourly Breakdown:**
+
 | Role | Hours | Rate | Subtotal |
 |------|-------|------|----------|
 | Lead Developer | 45 | $150 | $6,750 |
@@ -417,16 +425,19 @@ gantt
 ### Time Savings Calculation
 
 **Current State:**
+
 - Ted spends ~15 hours/week on proposals (60 hours/month)
 - Hourly CEO value: ~$200/hr (based on $400K salary equivalent)
 - Monthly cost of current process: 60 × $200 = **$12,000/month**
 
 **Future State with AI System:**
+
 - Estimated time reduction: 80% (12 hours/week saved)
 - New time on proposals: 3 hours/week (12 hours/month)
 - Monthly time savings value: 48 × $200 = **$9,600/month**
 
 **Annual Savings:**
+
 - Time savings: $9,600 × 12 = **$115,200/year**
 - Avoided proposal manager hire: **$80,000/year** (salary + benefits)
 - **Total Annual Value: $195,200**
@@ -445,6 +456,7 @@ xychart-beta
 ```
 
 **Proposals Only Investment:**
+
 | Metric | Value |
 |--------|-------|
 | **Initial Investment** | $70,000 |
@@ -455,6 +467,7 @@ xychart-beta
 | **5-Year Net Benefit** | $456,000 |
 
 **Full Platform Investment (All 5 Modules):**
+
 | Metric | Value |
 |--------|-------|
 | **Initial Investment** | $95,000 |
@@ -468,6 +481,7 @@ xychart-beta
 ### Competitive Advantage Benefits
 
 **Quantifiable:**
+
 - Faster proposal turnaround: 50% reduction (competitive edge)
 - Higher proposal quality: Estimated 10-15% win rate improvement
 - **Institutional knowledge preservation: $100K+ value**
@@ -477,6 +491,7 @@ xychart-beta
 - Estimate error prevention: Saves $50K+ annually in avoided pricing mistakes
 
 **Non-Quantifiable:**
+
 - CEO time freed for strategic initiatives
 - Reduced stress and proposal fatigue
 - Consistent brand voice across proposals
@@ -507,6 +522,7 @@ xychart-beta
 | **Total** | **$95,000** | - |
 
 **Flexible Options:**
+
 - **Proposals Only (Phases 1-2, 4-5):** $73,000 - Stop after proposals, add CRM later
 - **Proposals + CRM (Phases 1-3):** $55,000 - Core platform foundation
 - **Full Platform:** $95,000 - All 5 modules with complete integration
@@ -563,6 +579,7 @@ xychart-beta
 ### Assumptions
 
 **Client Responsibilities:**
+
 - [ ] Provide access to sample proposal documents (15-20 proposals minimum)
 - [ ] Designate project stakeholder for weekly check-ins
 - [ ] Provide timely feedback on deliverables (48-hour turnaround)
@@ -571,6 +588,7 @@ xychart-beta
 - [ ] Cover infrastructure costs (hosting, AI API, etc.)
 
 **Technical Assumptions:**
+
 - Modern web browsers supported (Chrome, Firefox, Safari, Edge - last 2 versions)
 - Internet connection required (web-based application)
 - ECI proposal documents are in standard formats (PDF, Word)
@@ -580,6 +598,7 @@ xychart-beta
 ### Exclusions
 
 **Not Included in Base Pricing:**
+
 - Custom integrations beyond Phase 4 scope
 - Data migration from legacy systems (unless specified)
 - Third-party software licenses or subscriptions
@@ -599,6 +618,7 @@ Changes to scope will be handled via change order process:
 4. If approved, work proceeds under new terms
 
 **Change Order Rates:**
+
 - Additional development: $150/hr (Eli), $100/hr (Naggie)
 - Rush requests: 1.5× standard rate
 - After-hours support: 1.5× standard rate
@@ -610,11 +630,13 @@ Changes to scope will be handled via change order process:
 ### Quality Guarantees
 
 **30-Day Warranty:**
+
 - All bugs and defects fixed at no charge
 - Covers issues arising from normal use
 - Starts from final delivery date
 
 **Performance Guarantees:**
+
 - Page load times <2 seconds (on standard connection)
 - 99.5% uptime SLA (excluding scheduled maintenance)
 - AI response times <10 seconds for standard requests
@@ -622,18 +644,21 @@ Changes to scope will be handled via change order process:
 ### Risk Mitigation Strategies
 
 **Technology Risks:**
+
 - Use proven, stable technology stack
 - Multiple AI provider options (Claude, GPT-4, fallback)
 - Regular backups and disaster recovery plan
 - Comprehensive testing at each phase
 
 **Budget Risks:**
+
 - Fixed-price phases prevent cost overruns
 - Clear scope documents signed before each phase
 - Change order process for additions
 - Transparent communication on timeline/budget status
 
 **Timeline Risks:**
+
 - Buffer built into estimates (conservative)
 - Agile methodology allows for adjustments
 - Weekly progress updates
