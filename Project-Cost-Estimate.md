@@ -388,13 +388,13 @@ As discussed, additional costs will be incurred by the Client for AI API calls, 
 |---------|---------|-------------|
 | **Hosting** | Vercel/AWS | $500 - $1,200 |
 | **Database** | PostgreSQL (Supabase/PlanetScale) | $300 - $600 |
-| **AI API** | Claude/OpenAI | $1,200 - $2,400 |
+| **AI API** | Claude/OpenAI | $240 - $480 |
 | **Storage** | Document storage (S3/R2) | $100 - $300 |
 | **Monitoring** | Error tracking, analytics | $200 - $400 |
 | **Email** | Transactional emails | $100 - $200 |
-| **Total Annual** | | **$2,400 - $5,100** |
+| **Total Annual** | | **$1,440 - $3,180** |
 
-**Note:** AI API costs are usage-based. Estimate assumes ~500 proposals/year with average 5 sections each.
+**Note:** AI API costs are usage-based. Estimate assumes ~100 proposals/year with average 5 sections each.
 
 ---
 
