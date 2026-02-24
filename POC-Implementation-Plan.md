@@ -1,247 +1,48 @@
-# ECI Construction - Unified Business Intelligence Platform POC
+# ECI Site Construction - AI-Powered Business Intelligence Platform
 
-**Project:** Phase 1 - AI Proposal Manager (Non-Functional Proof of Concept)  
-**Client:** ECI Construction  
-**Created:** February 3, 2026  
-**Last Updated:** February 4, 2026  
-**Status:** ✅ 100% COMPLETE - All 10 Pages Built & Functional  
-**Completion Date:** February 4, 2026  
-**Original Target:** February 17, 2026 (2 weeks)
-
----
-
-## 🎉 POC COMPLETION SUMMARY
-
-**Overall Status:** ✅ 100% COMPLETE  
-**Completion Date:** February 4, 2026 (13 days ahead of schedule)  
-**Total Pages Built:** 10 fully functional pages  
-**Total Development Time:** 2 days  
-
-### What Was Built
-
-#### Core Proposal Module (5 Pages) - ✅ Complete
-1. **Dashboard** (`/`) - Platform overview with module cards and quick stats
-2. **Proposal Library** (`/proposals`) - 24 historical proposals with search/filter
-3. **RFP Analysis** (`/proposals/rfp-analysis`) - AI document extraction simulator
-4. **Content Generator** (`/proposals/generator`) - 7 section types with AI generation
-5. **Analytics** (`/proposals/analytics`) - Recharts visualizations + guard rails preview
-6. **Proposal Wizard** (`/proposals/wizard`) - 6-step guided workflow
-
-#### Phase 4 Pages (4 Pages) - ✅ Complete (Feb 4, 2026)
-7. **ECI CRM** (`/crm`) - Client relationship tracking, pipeline management, touch-points
-8. **Resource Management** (`/resources`) - Staff allocation, utilization tracking, project staffing
-9. **Data Aggregation** (`/data`) - System integrations (Procore, QuickBooks), unified KPIs
-10. **Project Intelligence** (`/intelligence`) - Cost trends, budget alerts, AI predictions
-
-### Key Features Implemented
-- ✅ Collapsible sidebar navigation with auto-expand on child routes
-- ✅ Official ECI logo integration (favicon)
-- ✅ Comprehensive mock data across all modules
-- ✅ Interactive filters, search, and view toggles
-- ✅ TypeScript type-safe codebase (zero errors)
-- ✅ Responsive layouts across all pages
-- ✅ Professional enterprise-quality UI matching reference standards
-
-### Recent Updates (February 4, 2026)
-- **Built out Phase 4 pages** - Converted "Coming Soon" placeholders to fully functional POC pages
-- **Fixed navigation** - Removed "Coming Soon" badges, made all pages clickable
-- **Added comprehensive features**:
-  - CRM: 6 municipal clients, pipeline view with weighted values, upcoming touch-points
-  - Resources: 7 staff members with utilization tracking, project staffing views
-  - Data: System integrations grid, cross-system KPIs, multi-system project status
-  - Intelligence: Cost trends analysis, budget alerts, AI predictive modeling
-
-### Git Repository Status
-- **Latest Commit:** "Remove 'Coming Soon' badges from navigation - all Phase 4 pages now active and clickable"
-- **Total Commits:** 10+ commits tracking incremental progress
-- **Repository:** Clean, organized, production-ready code
-
-### Outstanding Items (Optional Enhancements)
-- [ ] Deploy to Vercel for live demo URL (optional)
-- [ ] Create presentation deck (optional - app speaks for itself)
-- [ ] Record walkthrough video (optional)
-- [ ] Additional mobile responsive optimizations (optional)
-
-### Success Metrics
-- ✅ All acceptance criteria exceeded
-- ✅ Enterprise SaaS quality UI achieved
-- ✅ Complete 5-module platform vision demonstrated
-- ✅ Ready for client presentation
-- ✅ Ahead of schedule by 13 days
-
-### Development Phases Overview
-
-All 4 phases completed in 2 days (Feb 3-4, 2026):
-
-**Phase 1: Core Proposal Module** - ✅ COMPLETE (Feb 3, 2026)
-- Dashboard foundation with navigation system
-- Proposal Library with 24 historical proposals
-- Search, filter, and tag functionality
-- Enterprise UI foundation established
-- *Deliverable: 2 functional pages (Dashboard + Library)*
-
-**Phase 2: AI Integration & Content Generation** - ✅ COMPLETE (Feb 3, 2026)
-- RFP Analysis page with AI extraction simulator
-- Content Generator with 7 section types
-- Mock AI generation workflows
-- Real-time preview functionality
-- *Deliverable: 2 functional pages (RFP Analysis + Generator)*
-
-**Phase 3: Historical Cost Analytics & Wizard Build** - ✅ COMPLETE (Feb 3, 2026)
-- Analytics page with Recharts visualizations
-- Guard rails preview and cost tracking
-- Proposal Builder Wizard with 6-step flow
-- Integration with existing proposal data
-- *Deliverable: 2 functional pages (Analytics + Wizard)*
-
-**Phase 4: Polish, Platform Integration & Demo Prep** - ✅ COMPLETE (Feb 4, 2026)
-- ECI CRM with client grid and pipeline views
-- Resource Management with staff allocation
-- Data Aggregation with system integrations
-- Project Intelligence with AI predictions
-- Navigation polish and "Coming Soon" removal
-- *Deliverable: 4 fully functional pages + navigation fixes*
+**Client:** ECI Site Construction
+**Project:** AI-Powered Business Intelligence Platform
+**Prepared By:** The CRM Wizards
+**Date:** February 24, 2026
 
 ---
 
 ## Table of Contents
-- [Strategic Vision](#strategic-vision)
-- [Overview](#overview)
+- [Project Overview](#project-overview)
 - [System Architecture](#system-architecture)
-- [Feature Set](#feature-set)
-- [Implementation Phases](#implementation-phases)
+- [Module 1: AI Assisted Proposal Management](#module-1-ai-assisted-proposal-management)
+- [Module 2: CRM & Resource Allocation System](#module-2-crm--resource-allocation-system)
+- [Module 3: Data Aggregation with Project Intelligence](#module-3-data-aggregation-with-project-intelligence)
 - [Technology Stack](#technology-stack)
-- [UI/UX Design Guidelines](#uiux-design-guidelines)
 - [Timeline & Milestones](#timeline--milestones)
 - [Success Criteria](#success-criteria)
 
 ---
 
-## Strategic Vision
+## Project Overview
 
-### ECI's Complete Business Challenges & Platform Roadmap
+Development of a custom AI-powered unified business intelligence platform tailored specifically for ECI's unique business needs. The project is organized into three modules, each delivering standalone value while building toward a fully integrated platform.
 
-During our meeting and follow-up email, Ted identified **five critical areas** that this platform will address:
+**Module 1** focuses on proposal management as the foundation. **Module 2** expands into CRM and resource allocation. **Module 3** brings data aggregation and project intelligence to complete the platform vision.
 
-```mermaid
-mindmap
-  root((ECI Business Intelligence Platform))
-    Proposal Management
-      AI Content Generation
-      RFP Analysis
-      Historical Search
-      Cost Analytics
-      **Phase 1 POC - Feb 2026**
-    Municipal Project CRM
-      Long Design Projects
-      Touch Point Tracking
-      Municipal Pipeline
-      Relationship Management
-      **Phase 3 - Q2 2026**
-    Resource Management
-      Staffing Allocation
-      Project Assignment
-      Capacity Planning
-      Utilization Tracking
-      **Phase 4 - Q3 2026**
-    Data Aggregation
-      Procore Integration
-      Financial Systems
-      Estimating Software
-      Unified Dashboard
-      **Phase 5 - Q3 2026**
-    Project Intelligence
-      Cost Tracking
-      Budget vs Actual
-      Timeline Analysis
-      Win/Loss Analytics
-      **Phase 5 - Q4 2026**
-```
+The system will replace manual proposal processes, reduce Executive time spent on proposals by 80%+, preserve institutional knowledge, and address identified business pain points across all three modules.
 
-### Ted's Email Follow-Up (Critical Addition):
+### Module Summary
 
-> "Frankly – we should also think about a simple CRM platform – we don't need anything crazy there either. Again, most of our work is municipal, gets advertised, etc. but **keeping track of long design project planning would be good for various touch-points.**"
+| Module | Deliverable | Development Time | Investment |
+|--------|-------------|-----------------|------------|
+| **Module 1** | AI Assisted Proposal Management Application | ~3-4 weeks | $37,125 |
+| **Module 2** | CRM & Resource Allocation System | ~4-6 weeks | $48,375 |
+| **Module 3** | Data Aggregation with Project Intelligence | ~2 weeks | $18,000 |
+| **Total** | **Full Business Intelligence Platform (3 Modules)** | **~9-12 weeks** | **$103,500** |
 
-**Why This Matters:**
-- Municipal projects have long planning cycles (12-36+ months before RFP)
-- Multiple stakeholders require relationship management
-- Touch-point tracking ensures ECI stays top-of-mind
-- Early involvement in design phase = competitive advantage
-- **Natural integration with proposal module** - when project goes to RFP, historical relationship context informs proposal
-
-### Why Start with Proposals?
-
-**Immediate ROI:**
-- Ted spends 15+ hours/week on proposals (60 hrs/month)
-- CEO-level time valued at $200/hr = $12,000/month waste
-- 80% time reduction = **$115,200/year savings**
-- Fastest path to demonstrating AI value
-
-**Foundation for Expansion:**
-- Proposal data contains project types, budgets, timelines, resources
-- Natural bridge to resource allocation (who worked on what)
-- Historical cost data feeds into estimating and analytics
-- Common UI/UX patterns reusable across modules
-
-**Institutional Knowledge Preservation:**
-- Captures Ted's 20+ years of recreation construction expertise
-- Preserves "tribal knowledge" for succession planning
-- Ensures consistency even as team members change
-- Protects against knowledge loss (estimated $100K+ value)
-- **Ted's pain point:** "90% of proposal content already exists but takes hours to locate"
-
-**Strategic Positioning:**
-- Differentiates from off-the-shelf proposal tools (Shred.ai, Unanet, Responsive)
-- Demonstrates custom platform capability
-- Shows integration potential with existing systems (Procore, financial software)
-- Validates AI approach before tackling more complex modules
-
----
-
-## Overview
-
-### POC Phase 1 Objective
-Build a non-functional proof of concept demonstrating the **AI Proposal Manager** module as the first component of ECI's unified business intelligence platform. This POC will showcase:
-
-**Primary Features (Proposal Management):**
-- Modern, professional UI comparable to enterprise SaaS tools
-- AI-powered proposal content generation
-- RFP analysis and extraction
-- Historical proposal search and retrieval
-- Cost/fee analytics based on past projects
-
-**Platform Vision Preview (Future Modules):**
-- **Municipal Project CRM**: Track long design project planning, touch-points, municipal pipeline
-- **Resource Management**: Staffing allocation, project assignment, capacity planning
-- **Data Aggregation**: Unified dashboard integrating Procore, financial systems, estimating software
-- **Project Intelligence**: Cost tracking, budget analysis, win/loss analytics
-- Navigation structure showing all 5 modules with consistent design system
-
-### Scope
-**In Scope for POC:**
-- ✅ Visual prototype with working UI components
-- ✅ Simulated AI responses using sample data
-- ✅ Interactive demonstrations of proposal workflows
-- ✅ Professional design system for entire platform
-- ✅ Sample proposal library interface
-- ✅ RFP upload and analysis mockup
-- ✅ Cost analytics dashboard prototype
-- ✅ Navigation showing full platform vision (5 modules)
-- ✅ Preview mockups of future modules (CRM, staffing, data aggregation, project intelligence)
-
-**Out of Scope:**
-- ❌ Live AI API integration
-- ❌ Database implementation
-- ❌ User authentication system
-- ❌ Full backend development
-- ❌ Production deployment infrastructure
-- ❌ Actual system integrations (Procore, financial software)
+Development of each module can run in parallel (overlapping sprints) or in "waterfall" execution (complete each module before beginning the next). The CRM Wizards will not begin work on any module without a confirmed go/no-go from Client.
 
 ---
 
 ## System Architecture
 
-### Platform-Wide Architecture Vision
+### Platform-Wide Architecture
 
 ```mermaid
 graph TB
@@ -249,179 +50,112 @@ graph TB
         Nav[Unified Navigation]
         Dashboard[Dashboard Home]
         Proposals[Proposal Module]
-        CRM[Municipal CRM Module]
-        Resources[Resource Management Module]
-        DataAgg[Data Aggregation Module]
-        Analytics[Project Intelligence Module]
+        CRM[CRM Module]
+        Resources[Resource Management]
+        DataAgg[Data Aggregation]
+        Intelligence[Project Intelligence]
     end
-    
+
     subgraph "Application Services"
         API[API Gateway]
         Auth[Authentication & RBAC]
         Integration[Integration Hub]
     end
-    
+
     subgraph "AI & Intelligence"
         AIEngine[AI Service Layer]
         ProposalAI[Proposal AI]
         PredictiveAI[Predictive Analytics]
         NLP[Document Processing]
     end
-    
+
     subgraph "Data & Integration"
         MainDB[(Central Database)]
         Procore[Procore API]
         Financial[Financial System]
-        Estimating[Estimating Software]
         DocStore[(Document Storage)]
     end
-    
+
     Nav --> Dashboard
     Nav --> Proposals
     Nav --> CRM
     Nav --> Resources
     Nav --> DataAgg
-    Nav --> Analytics
-    
+    Nav --> Intelligence
+
     Proposals --> API
     CRM --> API
     Resources --> API
     DataAgg --> API
-    Analytics --> API
-    
+    Intelligence --> API
+
     API --> Auth
     API --> Integration
     API --> AIEngine
-    
+
     AIEngine --> ProposalAI
     AIEngine --> PredictiveAI
     AIEngine --> NLP
-    
+
     Integration --> Procore
     Integration --> Financial
-    Integration --> Estimating
-    
+
     API --> MainDB
     API --> DocStore
-    
+
     style Proposals fill:#90EE90
     style CRM fill:#FFE4B5
     style Resources fill:#FFE4B5
-    style DataAgg fill:#FFE4B5
-    style Analytics fill:#FFE4B5
-    
-    classDef phase1 fill:#90EE90
-    classDef future fill:#FFE4B5
+    style DataAgg fill:#ADD8E6
+    style Intelligence fill:#ADD8E6
 ```
 
 **Legend:**
-- 🟢 Green: Phase 1 POC (Proposals) - Feb 2026
-- 🟡 Orange: Future Phases - Q2-Q4 2026
+- Green: Module 1 (Proposal Management)
+- Orange: Module 2 (CRM & Resource Allocation)
+- Blue: Module 3 (Data Aggregation & Project Intelligence)
 
-### POC Architecture (Phase 1 Focus)
-
-```mermaid
-flowchart TB
-    subgraph "Frontend Layer"
-        UI[Modern Web Interface]
-        Components[Reusable UI Components]
-        State[State Management]
-    end
-    
-    subgraph "Demo Layer - POC"
-        Mock[Mock Data Service]
-        Simulator[AI Response Simulator]
-        Sample[Sample Proposal Library]
-    end
-    
-    subgraph "Future Production Layer"
-        API[API Gateway]
-        AI[AI Service - Claude/GPT]
-        DB[(Document Database)]
-        Vector[(Vector Store)]
-    end
-    
-    UI --> Components
-    Components --> State
-    State --> Mock
-    Mock --> Simulator
-    Mock --> Sample
-    
-    State -.Future.-> API
-    API -.Future.-> AI
-    API -.Future.-> DB
-    API -.Future.-> Vector
-    
-    style Mock fill:#90EE90
-    style Simulator fill:#90EE90
-    style Sample fill:#90EE90
-    style API fill:#FFB6C1
-    style AI fill:#FFB6C1
-    style DB fill:#FFB6C1
-    style Vector fill:#FFB6C1
-```
-
-### Module Integration Architecture (Full Platform)
+### Module Integration Architecture
 
 ```mermaid
 graph LR
     subgraph "Module 1: Proposals"
         P1[Proposal Library]
         P2[RFP Analysis]
-        P3[Content Generator]
-        P4[Cost Analytics]
+        P3[AI Content Generator]
+        P4[Analytics & Guard Rails]
+        P5[Proposal Wizard]
+        P6[Document Generation]
     end
-    
-    subgraph "Module 2: Municipal CRM"
+
+    subgraph "Module 2: CRM & Resources"
         C1[Project Pipeline]
-        C2[Touch Point Tracking]
-        C3[Relationship Management]
-        C4[Design Phase Monitoring]
+        C2[Touch Point Management]
+        C3[Customer Database]
+        C4[Alerts & Automation]
+        C5[Resource Management]
     end
-    
-    subgraph "Module 3: Resources"
-        R1[Staff Directory]
-        R2[Allocation Tool]
-        R3[Capacity Planning]
-        R4[Utilization Reports]
+
+    subgraph "Module 3: Data & Intelligence"
+        D1[System Integrations]
+        D2[Project Intelligence]
+        D3[Advanced Cost Analytics]
     end
-    
-    subgraph "Module 4: Data Aggregation"
-        D1[Procore Connector]
-        D2[Financial Sync]
-        D3[Unified Dashboard]
-        D4[Real-time Updates]
-    end
-    
-    subgraph "Module 5: Project Intelligence"
-        I1[Cost Tracking]
-        I2[Budget Variance]
-        I3[Timeline Analysis]
-        I4[Predictive Analytics]
-    end
-    
+
     subgraph "Shared Services"
         S1[(Central Data Store)]
         S2[AI Engine]
         S3[Reporting Engine]
     end
-    
-    P1 & P2 & P3 & P4 --> S1
-    C1 & C2 & C3 & C4 --> S1
-    R1 & R2 & R3 & R4 --> S1
-    D1 & D2 & D3 & D4 --> S1
-    I1 & I2 & I3 & I4 --> S1
-    
+
+    P1 & P2 & P3 & P4 & P5 & P6 --> S1
+    C1 & C2 & C3 & C4 & C5 --> S1
+    D1 & D2 & D3 --> S1
+
     P3 --> S2
-    R3 --> S2
-    I4 --> S2
-    
-    P4 & R4 & D3 & I2 --> S3
-    
-    style P1 fill:#90EE90
-    style P2 fill:#90EE90
-    style P3 fill:#90EE90
-    style P4 fill:#90EE90
+    D2 --> S2
+
+    P4 & C5 & D3 --> S3
 ```
 
 ### Data Flow Across Modules
@@ -430,383 +164,33 @@ graph LR
 flowchart TD
     A[User Creates Proposal] --> B[Proposal Data Captured]
     B --> C{Cross-Module Impact}
-    
-    C --> D[Resources Module]
-    D --> E[Track: Who worked on proposal?]
-    E --> F[Update: Staff utilization metrics]
-    
-    C --> G[Analytics Module]
-    G --> H[Capture: Project type, budget, timeline]
-    H --> I[Update: Historical cost database]
-    
-    C --> J[Data Aggregation]
-    J --> K[Sync: With Procore if proposal won]
-    K --> L[Create: Project record in main DB]
-    
-    I --> M[Feed Predictive Models]
-    F --> M
-    L --> M
-    M --> N[Improve Future Estimates]
-    
-    style A fill:#90EE90
-    style B fill:#90EE90
+
+    C --> D[CRM Module]
+    D --> E[Link proposal to client relationship history]
+
+    C --> F[Resource Module]
+    F --> G[Track: Who worked on proposal?]
+    G --> H[Update: Staff utilization metrics]
+
+    C --> I[Intelligence Module]
+    I --> J[Capture: Project type, budget, timeline]
+    J --> K[Update: Historical cost database]
+
+    K --> L[Feed Predictive Models]
+    H --> L
+    L --> M[Improve Future Estimates]
 ```
 
 ---
 
-## Detailed Technical Architecture
+## Module 1: AI Assisted Proposal Management
 
-### Component Architecture
+**Duration:** ~3-4 weeks
+**Investment:** $37,125
 
-```mermaid
-graph TB
-    subgraph "Presentation Layer"
-        Pages[Next.js Pages/Routes]
-        Layout[Layout Components]
-        Features[Feature Components]
-        UI[UI Components - shadcn]
-    end
-    
-    subgraph "State Management"
-        Context[React Context]
-        Hooks[Custom Hooks]
-        Cache[Client Cache]
-    end
-    
-    subgraph "Service Layer"
-        MockAPI[Mock API Service]
-        DataService[Data Service]
-        AIService[AI Simulator Service]
-        FileService[File Handler]
-    end
-    
-    subgraph "Data Layer - POC"
-        JSON[JSON Mock Data]
-        LocalStorage[Browser Storage]
-        StaticAssets[Static Files]
-    end
-    
-    Pages --> Layout
-    Layout --> Features
-    Features --> UI
-    Features --> Context
-    Context --> Hooks
-    Hooks --> MockAPI
-    MockAPI --> DataService
-    MockAPI --> AIService
-    MockAPI --> FileService
-    DataService --> JSON
-    AIService --> JSON
-    FileService --> StaticAssets
-    Cache --> LocalStorage
-```
+### 1.1 Proposal Library System
 
-### Data Flow Architecture
-
-```mermaid
-sequenceDiagram
-    participant User
-    participant UI
-    participant State
-    participant Service
-    participant MockData
-    
-    User->>UI: Interact (Upload RFP)
-    UI->>State: Dispatch Action
-    State->>Service: Request Processing
-    Service->>MockData: Fetch Sample Response
-    MockData-->>Service: Return Mock Analysis
-    Service-->>State: Update State
-    State-->>UI: Re-render
-    UI-->>User: Display Results
-```
-
-### Frontend Component Hierarchy
-
-```mermaid
-graph TD
-    App[App Root] --> Layout[Main Layout]
-    Layout --> Nav[Navigation]
-    Layout --> Main[Main Content]
-    Layout --> Toast[Toast Notifications]
-    
-    Main --> Dashboard[Dashboard Page]
-    Main --> Library[Proposal Library Page]
-    Main --> RFP[RFP Analysis Page]
-    Main --> Generator[Content Generator Page]
-    Main --> Analytics[Analytics Page]
-    Main --> Wizard[Proposal Wizard Page]
-    
-    Library --> LibraryGrid[Grid View]
-    Library --> LibraryFilters[Filter Sidebar]
-    Library --> LibrarySearch[Search Bar]
-    
-    LibraryGrid --> ProposalCard[Proposal Card x N]
-    ProposalCard --> CardActions[Action Buttons]
-    
-    RFP --> UploadZone[Dropzone Component]
-    RFP --> AnalysisDisplay[Analysis Results]
-    AnalysisDisplay --> SummaryCard[Summary Cards]
-    AnalysisDisplay --> RequirementsList[Requirements List]
-    
-    Generator --> ContentForm[Content Type Form]
-    Generator --> AIOutput[Generated Content Display]
-    Generator --> ContentEditor[Inline Editor]
-    
-    Analytics --> FilterPanel[Analytics Filters]
-    Analytics --> Charts[Chart Components]
-    Analytics --> DataTable[Data Grid]
-    
-    Wizard --> WizardStepper[Step Indicator]
-    Wizard --> WizardSteps[Step Content]
-    WizardSteps --> Step1[Project Info]
-    WizardSteps --> Step2[Requirements]
-    WizardSteps --> Step3[Content Selection]
-    WizardSteps --> Step4[Generation]
-    WizardSteps --> Step5[Review]
-    WizardSteps --> Step6[Export]
-```
-
-### Data Model (Mock Data Structure)
-
-```mermaid
-erDiagram
-    PROPOSAL ||--o{ PROPOSAL_SECTION : contains
-    PROPOSAL ||--|| PROJECT : for
-    PROPOSAL {
-        string id PK
-        string title
-        string clientName
-        enum projectType
-        number budget
-        date submissionDate
-        enum status
-        number fee
-        number feePercentage
-        number durationMonths
-        string[] tags
-        date createdAt
-    }
-    
-    PROPOSAL_SECTION {
-        string id PK
-        string proposalId FK
-        string sectionType
-        string content
-        number order
-        boolean aiGenerated
-    }
-    
-    PROJECT {
-        string id PK
-        string name
-        enum type
-        number estimatedBudget
-        date deadline
-        string location
-    }
-    
-    RFP ||--o{ RFP_REQUIREMENT : contains
-    RFP {
-        string id PK
-        string projectName
-        string clientName
-        date uploadDate
-        date deadline
-        number pageLimit
-        string[] inconsistencies
-        enum priority
-    }
-    
-    RFP_REQUIREMENT {
-        string id PK
-        string rfpId FK
-        string requirement
-        boolean required
-        string category
-    }
-    
-    CONTENT_TEMPLATE {
-        string id PK
-        string title
-        enum category
-        string template
-        string[] variables
-        date lastUsed
-    }
-    
-    ANALYTICS_DATA {
-        string id PK
-        number year
-        enum projectType
-        number avgFee
-        number avgDuration
-        number winRate
-        number projectCount
-    }
-```
-
-### State Management Pattern
-
-```mermaid
-stateDiagram-v2
-    [*] --> Idle
-    Idle --> Loading: User Action
-    Loading --> Success: Data Received
-    Loading --> Error: Request Failed
-    Success --> Idle: Reset
-    Error --> Idle: Retry
-    Success --> Updating: Modify Data
-    Updating --> Success: Update Complete
-    Updating --> Error: Update Failed
-```
-
-### File Processing Flow (POC - Simulated)
-
-```mermaid
-flowchart LR
-    A[User Uploads File] --> B{Validate File}
-    B -->|Invalid| C[Show Error]
-    B -->|Valid| D[Display Upload Progress]
-    D --> E[Simulate Processing Delay]
-    E --> F[Generate Mock Analysis]
-    F --> G[Extract Mock Data]
-    G --> H{Document Type?}
-    H -->|RFP| I[Create RFP Analysis]
-    H -->|Proposal| J[Add to Library]
-    I --> K[Display Results]
-    J --> K
-    C --> A
-```
-
-### Security Architecture (Future Production)
-
-```mermaid
-graph TB
-    subgraph "Client Browser"
-        WebApp[Web Application]
-    end
-    
-    subgraph "Edge Layer"
-        CDN[CDN - Vercel Edge]
-        WAF[Web Application Firewall]
-    end
-    
-    subgraph "Application Layer"
-        Auth[Authentication - NextAuth]
-        API[API Routes]
-        Middleware[Security Middleware]
-    end
-    
-    subgraph "Data Layer"
-        DB[(Encrypted Database)]
-        Storage[(Encrypted File Storage)]
-        Secrets[Secret Manager]
-    end
-    
-    WebApp --> CDN
-    CDN --> WAF
-    WAF --> Auth
-    Auth --> Middleware
-    Middleware --> API
-    API --> DB
-    API --> Storage
-    API --> Secrets
-    
-    style WebApp fill:#E3F2FD
-    style CDN fill:#FFF3E0
-    style WAF fill:#FFF3E0
-    style Auth fill:#E8F5E9
-    style Middleware fill:#E8F5E9
-    style DB fill:#FCE4EC
-    style Storage fill:#FCE4EC
-    style Secrets fill:#FCE4EC
-```
-
-### Deployment Architecture (Future Production)
-
-```mermaid
-graph TB
-    subgraph "Developer Workflow"
-        Dev[Local Development]
-        Git[GitHub Repository]
-    end
-    
-    subgraph "CI/CD Pipeline"
-        Actions[GitHub Actions]
-        Tests[Automated Tests]
-        Build[Build Process]
-    end
-    
-    subgraph "Hosting - Vercel"
-        Preview[Preview Deployments]
-        Production[Production Environment]
-    end
-    
-    subgraph "External Services"
-        AI[AI API - Claude/GPT]
-        DB[(Database - Supabase)]
-        Storage[R2/S3 Storage]
-        Monitor[Monitoring - Sentry]
-    end
-    
-    Dev --> Git
-    Git --> Actions
-    Actions --> Tests
-    Tests --> Build
-    Build --> Preview
-    Build --> Production
-    
-    Production --> AI
-    Production --> DB
-    Production --> Storage
-    Production --> Monitor
-    
-    style Dev fill:#E3F2FD
-    style Preview fill:#FFF3E0
-    style Production fill:#E8F5E9
-```
-
-### API Design (Future Production Reference)
-
-```mermaid
-graph LR
-    subgraph "API Endpoints - Future"
-        A[POST /api/proposals/upload]
-        B[GET /api/proposals/list]
-        C[POST /api/rfp/analyze]
-        D[POST /api/content/generate]
-        E[GET /api/analytics/costs]
-        F[POST /api/wizard/save]
-    end
-    
-    subgraph "Services"
-        S1[Document Service]
-        S2[AI Service]
-        S3[Analytics Service]
-    end
-    
-    A --> S1
-    B --> S1
-    C --> S1
-    C --> S2
-    D --> S2
-    E --> S3
-    F --> S1
-    F --> S2
-```
-
----
-
-## Feature Set
-
-### Phase 1 Features (POC - Fully Functional UI)
-
-#### 1. Proposal Library Dashboard
-
-**Status:** ✅ COMPLETE  
-**Priority:** P0 - Critical  
-**Completed:** February 3, 2026
+Upload and store proposal documents (PDF, Word) with automatic metadata extraction, full-text search capability, filtering and categorization, and preview/download functionality.
 
 ```mermaid
 graph LR
@@ -819,24 +203,46 @@ graph LR
 
 **Features:**
 - Grid/list view of historical proposals
-- Filter by: Project type, Year, Client, Value range
-- Search functionality
+- Filter by: Project type, year, client, value range
+- Full-text search functionality
 - Document preview modal
-- Upload new proposals interface
+- Upload new proposals (PDF, Word)
 - Statistics dashboard (total proposals, categories, date ranges)
 
-**Mock Data Required:**
-- 15-20 sample proposal entries with metadata
-- Project types: Recreation, Sports Complex, Aquatic Center, Playground
-- Date range: 2020-2025
-- Value range: $500K - $15M
+### 1.2 AI Content Generator
 
----
+Integration with AI API for context-aware content generation using historical data.
 
-#### 2. RFP Analysis Tool
+```mermaid
+flowchart TD
+    A[Select Content Type] --> B{Content Category}
+    B -->|Safety| C[Safety Writeup Generator]
+    B -->|Approach| D[Project Approach Generator]
+    B -->|Experience| E[Company Experience Generator]
+    B -->|Quality| F[Quality Control Generator]
 
-**Status:** ✅ COMPLETE  
-**Completed:** February 3, 2026
+    C --> G[AI Analysis of Past Content]
+    D --> G
+    E --> G
+    F --> G
+
+    G --> H[Generate Draft]
+    H --> I[User Review & Edit]
+    I --> J[Insert into Proposal]
+```
+
+**Content Templates:**
+1. Safety plans
+2. Project approach
+3. Company qualifications
+4. Quality control procedures
+
+**Features:**
+- Context-aware generation using historical data
+- Edit and refine generated content
+- Save custom templates
+
+### 1.3 RFP Analysis Tool
 
 ```mermaid
 sequenceDiagram
@@ -845,7 +251,7 @@ sequenceDiagram
     participant Parser
     participant AI
     participant Output
-    
+
     User->>UI: Upload RFP PDF
     UI->>Parser: Process Document
     Parser->>AI: Extract Key Information
@@ -856,137 +262,30 @@ sequenceDiagram
 ```
 
 **Features:**
-- Drag-and-drop RFP upload
-- Document processing indicator
-- Key information extraction display:
-  - Project scope summary
-  - Budget requirements
-  - Timeline/deadlines
+- Upload RFP documents
+- Automatic key information extraction:
+  - Project scope and requirements
+  - Budget and timeline
   - Submission requirements
-  - Page limits
   - Required sections
-- Inconsistency highlighting
-- Priority ranking of requirements
-- Export analysis as PDF
+- Inconsistency detection
+- Priority ranking
+- Exportable analysis summary
 
-**Mock Output:**
-```
-Project: Municipal Aquatic Center Renovation
-Budget Range: $2.5M - $3.2M
-Deadline: March 15, 2026
-Page Limit: 25 pages (⚠️ Conflicting info: Page 3 says 30 pages)
-Required Sections: Safety Plan, Project Approach, Timeline, References
-Key Requirements: LEED certification, prevailing wage compliance
-```
-
----
-
-### 3. AI Content Generator
-
-**Status:** ✅ COMPLETE  
-**Completed:** February 3, 2026
-
-```mermaid
-flowchart TD
-    A[Select Content Type] --> B{Content Category}
-    B -->|Safety| C[Safety Writeup Generator]
-    B -->|Approach| D[Project Approach Generator]
-    B -->|Experience| E[Company Experience Generator]
-    B -->|Timeline| F[Timeline Generator]
-    
-    C --> G[AI Analysis of Past Content]
-    D --> G
-    E --> G
-    F --> G
-    
-    G --> H[Generate Draft]
-    H --> I[User Review & Edit]
-    I --> J[Insert into Proposal]
-```
+### 1.4 Basic Analytics Dashboard
 
 **Features:**
-- Content type selector (dropdown)
-- Project context input form:
-  - Project type
-  - Budget range
-  - Special requirements
-  - Client type (municipal, private, etc.)
-- "Generate Content" button
-- Side-by-side editor:
-  - Left: AI-generated content
-  - Right: Editable version
-- Copy to clipboard
-- Save to library
-- Regenerate option
-
-**Sample Content Types:**
-1. Safety Plan & Procedures
-2. Construction Approach
-3. Company Experience & Qualifications
-4. Project Timeline
-5. Quality Control Procedures
-6. Environmental Compliance
-7. Team Qualifications
-
----
-
-### 4. Historical Cost Analytics
-
-**Status:** ✅ COMPLETE  
-**Completed:** February 3, 2026
-
-```mermaid
-graph TB
-    subgraph "Analytics Dashboard"
-        A[Project Filters]
-        B[Cost Trends Chart]
-        C[Fee Analysis Table]
-        D[Comparison Tool]
-    end
-    
-    A --> B
-    A --> C
-    A --> D
-    
-    B --> E[Visual Charts]
-    C --> F[Data Grid]
-    D --> G[Side-by-Side Comparison]
-```
-
-**Features:**
-- Interactive filters:
-  - Project type
-  - Year range
-  - Budget range
-  - Client type
-- Visualizations:
-  - Average fees by project size (bar chart)
-  - Timeline duration trends (line chart)
-  - Win rate by project type (pie chart)
-- Data table with sortable columns:
-  - Project name
-  - Year
-  - Budget
-  - Fee charged
-  - Fee percentage
-  - Duration
-- Quick stats cards:
-  - Average fee percentage
-  - Typical project duration
-  - Most successful project type
-- **Estimate Validation (Preview in POC):**
+- Historical project statistics
+- Fee analysis by project type
+- Timeline trends
+- Simple visualizations
+- **Estimate validation & sanity checks:**
   - Fee recommendation based on historical data
-  - Warning if fee % is significantly below historical average
-  - Alert if project duration estimate seems unrealistic
-  - "Sanity check" comparison to similar projects
-- Export to Excel
+  - Warnings for unusual pricing patterns
+  - Timeline reality checks
+  - Comparison to similar past projects
 
----
-
-### 5. Proposal Builder Wizard
-
-**Status:** ✅ COMPLETE  
-**Completed:** February 3, 2026
+### 1.5 Proposal Builder Wizard
 
 ```mermaid
 stateDiagram-v2
@@ -995,413 +294,252 @@ stateDiagram-v2
     RequirementsCheck --> ContentSelection
     ContentSelection --> AIGeneration
     AIGeneration --> Review
-    Review --> Formatting
-    Formatting --> Export
+    Review --> Export
     Export --> [*]
-    
+
     Review --> ContentSelection: Regenerate
     Review --> AIGeneration: Adjust
 ```
 
 **Features:**
-- Step-by-step wizard interface
-- Progress indicator (1 of 6, 2 of 6, etc.)
-
-**Step 1: Project Information**
-- Client name
-- Project type
-- Budget
-- Deadline
-- RFP upload (optional)
-
-**Step 2: Requirements Checklist**
-- Auto-populated from RFP (if uploaded)
-- Manual checklist editor
-- Missing requirements warning
-
-**Step 3: Content Selection**
-- Select required sections
-- Choose from templates or AI generation
-- Reorder sections
-
-**Step 4: AI Content Generation**
-- Batch generate selected sections
-- Progress indicator
-- Preview each section
-
-**Step 5: Review & Edit**
+- Step-by-step guided workflow
+- Project information collection
+- Requirements checklist (auto-populated from RFP)
+- Section selection and ordering
+- Batch AI content generation
 - Full proposal preview
-- Inline editing
-- Section reordering
-- Add/remove sections
+- Template selection
+- Export to PDF and Word
 
-**Step 6: Format & Export**
-- Choose template design
-- Add branding (logo, colors)
-- Export as PDF or Word
+### 1.6 Estimate Validation & Guard Rails
+
+- Prevent missing labor costs in proposals
+- Flag pricing errors before submission
+- Automated compliance checks (prevailing wage, LEED requirements)
+- Alert if estimate significantly deviates from historical patterns
+- Custom validation rules for ECI's workflow
+
+### 1.7 Enhanced AI Features
+
+- Fine-tuning on ECI-specific content
+- Custom prompt engineering
+- Multi-section coherence
+- Style consistency enforcement
+- Technical specification understanding
+- Automatic compliance checking
+
+### 1.8 Document Generation Engine
+
+- Professional PDF templates
+- ECI branding integration
+- Dynamic table of contents
+- Automatic formatting
+- Image and diagram support
+- Cover page customization
+
+### 1.9 User Interface
+
+- Responsive web application
+- Professional design system
+- Intuitive navigation
+- Mobile-friendly
+
+### 1.10 User Authentication
+
+- User authentication
+- Role-based access control
+
+### 1.11 Documentation & Training
+
+- Administrator documentation
+- "Train the Trainer" & User Guides
 
 ---
 
-### Future Module Previews (Visual Mockups Only in POC)
+## Module 2: CRM & Resource Allocation System
 
-#### 6. ECI CRM (Fully Built Out)
+**Duration:** ~4-6 weeks
+**Investment:** $48,375
 
-**Status:** ✅ COMPLETE - Full Functional POC  
-**Completed:** February 4, 2026  
-**Referenced in Email:** Ted's follow-up requirement  
-**Note:** Originally planned as mockup, built out with complete functionality
-
-**Ted's Exact Request:**
-> "Frankly – we should also think about a simple CRM platform – we don't need anything crazy there either. Again, most of our work is municipal, gets advertised, etc. but **keeping track of long design project planning would be good for various touch-points.**"
+### 2.1 Project Pipeline
 
 ```mermaid
-graph TB
-    subgraph "Municipal CRM Features"
-        A[Project Pipeline]
-        B[Touch Point Tracker]
-        C[Relationship Database]
-        D[Design Phase Monitor]
-    end
-    
-    A --> E[Municipal Projects List]
-    B --> F[Activity Timeline]
-    C --> G[Contact Management]
-    D --> H[Pre-RFP Alerts]
+graph LR
+    A[Planning] --> B[Design]
+    B --> C[Pre-RFP]
+    C --> D[Active RFP]
+    D --> E{Outcome}
+    E --> F[Won]
+    E --> G[Lost]
 ```
 
-**Preview Features to Mockup:**
-- **Pipeline Dashboard**: Track projects from early design through RFP
-  - Project status: Planning, Design, Pre-RFP, Active RFP, Won, Lost
-  - Estimated RFP date and project value
-  - Last contact date and next follow-up reminder
-- **Touch Point History**: Timeline of all interactions
-  - Meetings, calls, emails, site visits
-  - Relationship strength indicators
-  - Key decision-makers and their preferences
-- **Municipal Database**: 
-  - Cities/counties ECI works with
-  - Procurement contacts
-  - Historical relationship data
-  - Past project success rates by municipality
-- **Alerts & Reminders**:
-  - "City of X design phase starting - schedule touch-point"
-  - "90 days until estimated RFP - prepare proposal team"
-  - "No contact in 60 days - relationship at risk"
+**Features:**
+- Project tracking from early design through RFP
+- Status workflow: Planning → Design → Pre-RFP → Active RFP → Won/Lost
+- Estimated RFP date and project value tracking
+- Visual pipeline dashboard (kanban or list view)
+- Quick filters by status, municipality, project type, etc.
 
-**Why This Matters for Municipal Work:**
-- Long design cycles (12-36 months) require consistent relationship management
-- Early involvement = competitive advantage when RFP drops
-- Track which municipalities favor ECI vs. competitors
-- **Seamless integration with Proposal Module**: When project goes to RFP, all relationship context automatically available
+### 2.2 Touch Point Management
 
-**Connection to Other Modules:**
-- CRM → Proposals: Historical relationship informs proposal strategy
-- CRM → Resources: Identify staff with municipality relationships
-- CRM → Project Intelligence: Win/loss analysis by municipality
+- Activity timeline for each project
+- Log meetings, calls, emails, site visits
+- Next action reminders and follow-up tracking
+- Relationship strength indicators
+- Key decision-maker contact database
 
----
+### 2.3 Customer Database
 
-#### 7. Resource Allocation Dashboard (Phase 2B Preview)
+- Customer/Cities/Counties relationship tracker
+- Procurement contact management
+- Historical project data
+- Win rate analysis by category (i.e. municipality)
+- Preferred contractor lists tracking
 
-**Status:** 🟡 Future - Mockup Only  
-**Referenced in Meeting:** Demonstrated via consulting firm project management tool
+### 2.4 Alerts & Automation
+
+- "Design phase starting - schedule touch-point" alerts
+- "90 days until estimated RFP" notifications
+- "No contact in 60 days" relationship risk warnings
+
+### 2.5 CRM-Proposal Integration
+
+```mermaid
+flowchart LR
+    A[Project moves to RFP] --> B[Pull relationship context]
+    B --> C[Historical interaction summary]
+    B --> D[Key stakeholder preferences]
+    B --> E[Win/loss data]
+    C --> F[Inform proposal strategy]
+    D --> F
+    E --> F
+```
+
+**Features:**
+- When project moves to RFP, pull relationship context into proposal module
+- Historical interaction summary auto-populated
+- Key stakeholder preferences accessible
+- Win/loss data informs proposal strategy
+
+### 2.6 Resource Management
 
 ```mermaid
 graph TB
     subgraph "Resource Management Features"
-        A[Staff Directory]
-        B[Project Assignment]
-        C[Capacity Planning]
-        D[Utilization Dashboard]
+        A[Staff & Capacity Planning]
+        B[Skills Tracking]
+        C[Schedule & Utilization]
+        D[Allocation Adjustments]
     end
-    
-    A --> E[Visual Staff Cards]
-    B --> F[Drag & Drop Allocation]
-    C --> G[Hiring Forecast]
-    D --> H[Utilization Charts]
+
+    A --> E[Optimize across projects]
+    B --> F[Match staff to project needs]
+    C --> G[Visual utilization dashboard]
+    D --> H[Real-time reallocation]
 ```
 
-**Preview Features to Mockup:**
-- Staff directory with photos and roles
-- Project allocation grid showing:
-  - Who is assigned to which projects
-  - Percentage allocation per project
-  - Available capacity per person
-  - Overallocation warnings
-- Visual utilization trends (similar to consulting firm demo)
-- Quick stats: Total staff, avg utilization, open capacity
-- Integration point with proposal data (show staff used on past proposals)
+**Features:**
+- Optimize staff and capacity planning across projects
+- Track skills
+- View schedule and utilization
+- Add resources or adjust allocation
 
-**Ted's Pain Point:**
-> "We manually do staffing allocation in Excel... it's mom and pop versus being a little more refined in having a tool that does this."
+### 2.7 Documentation & Training
 
-**Connection to Proposals:**
-- When proposal is won → automatically suggest team based on similar past projects
-- Historical data shows which staff worked on similar projects
-- Capacity planning informs whether ECI can take on new work
+- Administrator documentation
+- "Train the Trainer" & User Guides
 
 ---
 
-#### 8. Data Aggregation Dashboard (Phase 3 Preview)
+## Module 3: Data Aggregation with Project Intelligence
 
-**Status:** 🟡 Future - Mockup Only  
-**Ted's Challenge:** "We have so many systems... they're kind of working in silos"
+**Duration:** ~2 weeks
+**Investment:** $18,000
+
+### 3.1 System Integrations
 
 ```mermaid
 graph LR
     subgraph "Integrated Systems"
-        P[Procore Projects]
-        F[Financial Data]
-        E[Estimating Software]
-        PP[Proposal Platform]
+        P[Procore]
+        F[Financial System]
+        E[Email]
+        C[Calendar]
+        S[Cloud Storage]
     end
-    
-    subgraph "Unified View"
-        D[Executive Dashboard]
+
+    subgraph "Platform"
+        Hub[Integration Hub]
     end
-    
-    P --> D
-    F --> D
-    E --> D
-    PP --> D
-    
-    D --> S1[Project Snapshot]
-    D --> S2[Financial Health]
-    D --> S3[Pipeline Status]
+
+    P -->|Read-only project data| Hub
+    F -->|Data sync| Hub
+    E -->|Notifications & activity logging| Hub
+    C -->|Deadlines & follow-ups| Hub
+    S -->|Google Drive/Dropbox| Hub
 ```
 
-**Preview Features to Mockup:**
-- Executive dashboard showing:
-  - All active projects from Procore
-  - Budget vs actual from financial system
-  - Proposal pipeline status
-  - Staff allocation overview
-  - Cash flow projection
-- "Snapshot" view Ted mentioned: "I can't just go to one place and have a dashboard that tells me everything"
-- Mobile-friendly view (Ted mentioned needing access in truck)
-- Integration status indicators showing which systems are connected
+**Features:**
+- Procore API integration (read-only project data)
+- Financial system data sync (if feasible)
+- Email integration for notifications and automated customer activity logging
+- Calendar integration for deadlines and follow-up scheduling
+- Cloud storage integration (Google Drive/Dropbox)
 
-**Mock Data Points:**
-- 8-10 active projects
-- Budget vs actual variance
-- 5-6 proposals in pipeline
-- Staff utilization summary
-- Revenue projection chart
+### 3.2 Performance Optimization
 
----
+- Database query optimization
+- Caching implementation
+- Image and file optimization
+- Load time improvements
+- Scalability enhancements
 
-#### 9. Project Cost Intelligence (Phase 4 Preview)
-
-**Status:** 🟡 Future - Mockup Only  
-**Ted's Need:** "Building projections manually... what falls off when... different people in different systems"
+### 3.3 Project Intelligence
 
 ```mermaid
 graph TB
     A[Historical Projects] --> B[Cost Database]
     C[Active Projects] --> B
     D[Proposals] --> B
-    
-    B --> E[Analytics Engine]
-    
-    E --> F[Cost Trends]
-    E --> G[Budget Variance]
-    E --> H[Predictive Models]
-    E --> I[Fee Optimization]
+
+    B --> E[AI Analytics Engine]
+
+    E --> F[Cost Trend Analysis]
+    E --> G[Budget Alerts]
+    E --> H[AI Predictive Modeling]
 ```
 
-**Preview Features to Mockup:**
-- Historical cost analytics (already in proposals module, expanded here)
-- Budget vs actual tracking for active projects
-- Project profitability analysis
-- **Estimate Guard Rails & Validation:**
-  - Prevent missing labor costs in proposals
-  - Flag pricing errors before submission
-  - Automated checks: "Did you include prevailing wage?"
-  - Alert if estimate significantly deviates from historical patterns
-  - **Custom validation rules** specific to ECI's recreation construction workflow
-- Fee recommendation engine:
-  - Input: Project type, budget range
-  - Output: Recommended fee % based on historical data
-  - Comparison: "Similar projects averaged 11.2% fee"
-- Timeline prediction based on past projects
-- Risk indicators (projects trending over budget)
+**Features:**
+- AI-powered cost analysis and predictive insights
+- Cost trend analysis
+- Budget alerts
+- AI predictive modeling
 
-**Ted's Quote:**
-> "For $1M to $5M projects, what were our average fees, average time? We could manually enter all that stuff, but there's a better way."
+### 3.4 Advanced Cost Analytics
 
-**Custom Solution Advantage:**
-- Off-the-shelf tools lack industry-specific validation rules
-- ECI-specific guard rails prevent costly estimation errors
-- Tailored to recreation construction unique requirements (LEED, prevailing wage, safety compliance)
+- Interactive dashboards
+- Historical cost comparisons
+- Fee recommendation engine
+- Project duration predictions
+- Win/loss analysis
+- Custom report builder
+- Data export capabilities
 
-**Connection to Other Modules:**
-- Uses proposal data for historical fees
-- Integrates with Procore for active project costs
-- Informs resource allocation (profitable projects get priority)
+### 3.5 Documentation & Training
 
----
-
-### Platform Navigation Preview
-
-**POC Will Include:**
-- Full navigation sidebar showing all modules (even if not built yet)
-- Dashboard home page with:
-  - Module cards for each of the 4 major areas
-  - "Coming Soon" badges on future modules
-  - Quick access to Phase 1 proposal features
-- Breadcrumb navigation
-- User profile menu (mockup only)
-
-**Navigation Structure:**
-```
-🏠 Dashboard Home
-📄 Proposals
-   ├─ Library
-   ├─ RFP Analysis
-   ├─ Content Generator
-   ├─ Analytics
-   └─ New Proposal Wizard
-   
-👥 Resources (Coming Soon)
-   ├─ Staff Directory
-   ├─ Project Allocation
-   ├─ Capacity Planning
-   └─ Utilization Reports
-   
-🔗 Data Hub (Coming Soon)
-   ├─ Executive Dashboard
-   ├─ Procore Integration
-   ├─ Financial Integration
-   └─ System Settings
-   
-📊 Project Intelligence (Coming Soon)
-   ├─ Cost Tracking
-   ├─ Budget Analysis
-   ├─ Timeline Insights
-   └─ Predictive Analytics
-   
-⚙️ Settings
-   ├─ Profile
-   ├─ Integrations
-   └─ Preferences
-```
-
----
-
-## Implementation Phases
-
-### Phase 1: Foundation & Platform Setup (Days 1-2)
-**Status:** ✅ COMPLETE
-
-**Tasks:**
-- [x] Set up Next.js project with TypeScript (Next.js 16.1.6)
-- [x] Configure Tailwind CSS (4.1.18)
-- [x] Install UI component library (shadcn/ui)
-- [x] Set up project structure for multi-module platform
-- [x] Create mock data generator for all modules
-- [x] Design system setup (colors, typography, spacing)
-- [x] Create reusable component library
-- [x] Build platform navigation structure with collapsible sidebar
-- [x] Create dashboard home page with module cards
-
-**Deliverables:**
-- Working development environment
-- Basic component library
-- Mock data structure for proposals + future modules
-- Design system documentation
-- Platform navigation skeleton
-
----
-
-### Phase 2: Core Proposal Features (Days 3-5)
-**Status:** ✅ COMPLETE
-
-**Tasks:**
-- [x] Implement Proposal Library view
-  - [x] Grid view with proposal cards
-  - [x] Filter by project type and status
-  - [x] Search functionality
-  - [x] 24 sample proposals with realistic data
-  - [x] Quick stats cards
-- [x] Build RFP upload interface (simulated)
-- [x] Create analysis results display with AI extraction
-- [x] Develop content generator form (7 section types)
-- [x] Integrate simulated AI responses with 2-second delays
-
-**Deliverables:**
-- Functional navigation
-- Interactive proposal library
-- Upload interface
-- Content generation UI
-- Working demo flow for proposal creation
-
----
-
-### Phase 3: Analytics & Future Module Previews (Days 6-8)
-**Status:** ✅ COMPLETE
-
-**Tasks:**
-- [x] Build cost analytics dashboard (fully functional)
-  - [x] Filter controls (type, year, sort)
-  - [x] Chart components (Recharts - Bar, Line, Pie)
-  - [x] Sortable data table
-  - [x] Statistics cards with KPIs
-  - [x] Estimate Guard Rails preview
-- [x] Create proposal builder wizard
-  - [x] 6-step multi-step form
-  - [x] Visual progress tracking
-  - [x] Section editor with templates
-  - [x] AI generation simulation with progress bar
-- [x] Build future module pages (FULLY BUILT - not just mockups):
-  - [x] ECI CRM - Client grid, pipeline, touch-points (Feb 4)
-  - [x] Resource Management - Staff allocation, utilization tracking (Feb 4)
-  - [x] Data Aggregation - System integrations, unified dashboard (Feb 4)
-  - [x] Project Intelligence - Cost tracking, AI predictions (Feb 4)
-- [x] Remove "Coming Soon" badges, make all pages active (Feb 4)
-- [x] Create integration connection indicators
-
-**Deliverables:**
-- Working analytics dashboard
-- Proposal wizard flow
-- Preview system
-- Export mockup
-- Visual mockups of all 4 platform modules
-
----
-
-### Phase 4: Polish, Platform Integration & Demo Prep (Days 9-10)
-**Status:** ✅ COMPLETE
-
-**Tasks:**
-- [x] Refine all animations and transitions
-- [x] Add loading states throughout application
-- [x] Collapsible sidebar with auto-expand on child routes
-- [x] Optimize responsive layouts across all pages
-- [x] Fix navigation visibility on all pages
-- [x] Official ECI logo integration (favicon)
-- [x] All TypeScript errors resolved
-- [x] Comprehensive mock data for all modules
-- [ ] Create demo script (optional - ready for demo as-is)
-- [ ] Record demo video (optional)
-- [ ] Create presentation deck (optional)
-
-**Deliverables:**
-- ✅ Polished UI with smooth interactions across entire platform
-- ✅ Demo-ready application with all 10 pages functional
-- ✅ Professional design system implemented consistently
-- ✅ Zero TypeScript errors, production-ready code
-- Enterprise SaaS quality achieved
+- Administrator documentation
+- "Train the Trainer" & User Guides
 
 ---
 
 ## Technology Stack
 
 ### Frontend Framework
-**Next.js 14+ (App Router)**
+**Next.js (App Router)**
 - Server components for performance
 - Built-in routing
 - TypeScript support
-- Easy deployment
+- Easy deployment to Vercel
 
 ### UI Framework
 **Tailwind CSS + shadcn/ui**
@@ -1410,669 +548,182 @@ graph TB
 - Pre-built accessible components
 - Customizable theme
 
-### Component Library
-**shadcn/ui Components:**
-- Button, Card, Dialog, Dropdown
-- Form inputs, Select, Checkbox
-- Table, Tabs, Toast notifications
-- Sheet, Skeleton, Progress
-
-### Icons
-**Lucide React**
-- Consistent icon set
-- Tree-shakeable
-- Customizable
-
 ### Charts & Visualizations
 **Recharts**
 - React-based charts
 - Responsive
 - Customizable
-- Good TypeScript support
+- TypeScript support
 
-### Mock Data
-**Faker.js**
-- Generate realistic sample data
-- Consistent test data
+### AI Integration
+- Claude or GPT-4 API for content generation
+- Custom prompt engineering for ECI-specific content
+- Document parsing for RFP analysis
 
-### File Handling (UI Only)
-**React Dropzone**
-- Drag-and-drop upload
-- File type validation
-- Preview support
+### Backend & Database
+- PostgreSQL (Supabase/PlanetScale) for structured data
+- Document storage (S3/R2) for uploaded files
+- Vector store for AI-powered search
 
----
-
-## Technical Specifications
-
-### Development Environment Setup
-
-**Required Tools:**
-```bash
-# Node.js & Package Manager
-node >= 18.17.0
-npm >= 9.0.0 or pnpm >= 8.0.0
-
-# Version Control
-git >= 2.40.0
-
-# Code Editor (Recommended)
-VS Code with extensions:
-  - ESLint
-  - Prettier
-  - Tailwind CSS IntelliSense
-  - TypeScript and JavaScript Language Features
-```
-
-**Environment Variables (.env.local):**
-```bash
-# POC Configuration
-NEXT_PUBLIC_APP_NAME="ECI Proposal Manager"
-NEXT_PUBLIC_DEMO_MODE=true
-
-# Future Production (Not used in POC)
-# NEXT_PUBLIC_API_URL=
-# OPENAI_API_KEY=
-# ANTHROPIC_API_KEY=
-# DATABASE_URL=
-# NEXTAUTH_SECRET=
-```
+### Authentication
+- NextAuth.js for user authentication
+- Role-based access control
 
 ### Project Structure
 
 ```
-eci-proposal-manager/
+eci-platform/
 ├── app/                          # Next.js App Router
 │   ├── (dashboard)/             # Dashboard layout group
 │   │   ├── page.tsx             # Dashboard home
-│   │   ├── proposals/           # Proposal library
-│   │   ├── rfp-analysis/        # RFP analyzer
-│   │   ├── generator/           # Content generator
-│   │   ├── analytics/           # Analytics dashboard
-│   │   └── wizard/              # Proposal wizard
+│   │   ├── proposals/           # Proposal module pages
+│   │   ├── crm/                 # CRM module pages
+│   │   ├── resources/           # Resource management pages
+│   │   ├── data/                # Data aggregation pages
+│   │   └── intelligence/        # Project intelligence pages
 │   ├── layout.tsx               # Root layout
-│   ├── globals.css              # Global styles
-│   └── providers.tsx            # Context providers
+│   └── globals.css              # Global styles
 ├── components/                   # React components
 │   ├── ui/                      # shadcn components
-│   │   ├── button.tsx
-│   │   ├── card.tsx
-│   │   ├── dialog.tsx
-│   │   └── ...
-│   ├── proposal/                # Proposal-specific
-│   │   ├── proposal-card.tsx
-│   │   ├── proposal-grid.tsx
-│   │   └── proposal-filters.tsx
-│   ├── rfp/                     # RFP analysis
-│   │   ├── upload-zone.tsx
-│   │   └── analysis-display.tsx
-│   ├── analytics/               # Analytics
-│   │   ├── cost-chart.tsx
-│   │   └── stats-card.tsx
+│   ├── proposal/                # Proposal-specific components
+│   ├── crm/                     # CRM components
+│   ├── resources/               # Resource management components
 │   └── layout/                  # Layout components
-│       ├── nav.tsx
-│       ├── sidebar.tsx
-│       └── header.tsx
-├── lib/                         # Utilities
-│   ├── mock-data/               # Mock data generators
-│   │   ├── proposals.ts
-│   │   ├── rfp-analysis.ts
-│   │   ├── analytics.ts
-│   │   └── templates.ts
-│   ├── services/                # Mock services
-│   │   ├── ai-simulator.ts
-│   │   └── data-service.ts
+├── lib/                         # Utilities & services
+│   ├── services/                # API services
 │   ├── utils.ts                 # Helper functions
 │   └── types.ts                 # TypeScript types
-├── public/                      # Static assets
-│   ├── sample-proposals/        # Sample PDFs
-│   └── images/
 ├── hooks/                       # Custom React hooks
-│   ├── use-proposals.ts
-│   ├── use-rfp-analysis.ts
-│   └── use-analytics.ts
-├── contexts/                    # React Context
-│   └── app-context.tsx
-├── tailwind.config.ts           # Tailwind configuration
-├── tsconfig.json                # TypeScript config
-├── next.config.js               # Next.js config
-└── package.json                 # Dependencies
+├── contexts/                    # React Context providers
+└── public/                      # Static assets
 ```
-
-### TypeScript Type Definitions
-
-```typescript
-// lib/types.ts
-
-export type ProjectType = 'Recreation' | 'Sports Complex' | 'Aquatic' | 'Playground' | 'Other';
-export type ProposalStatus = 'Won' | 'Lost' | 'Pending';
-export type ContentCategory = 'Safety' | 'Approach' | 'Experience' | 'Timeline' | 'Quality' | 'Environment' | 'Team';
-export type Priority = 'High' | 'Medium' | 'Low';
-
-export interface Proposal {
-  id: string;
-  title: string;
-  client: string;
-  projectType: ProjectType;
-  budget: number;
-  submissionDate: Date;
-  status: ProposalStatus;
-  fee: number;
-  feePercentage: number;
-  durationMonths: number;
-  fileUrl: string;
-  tags: string[];
-  sections?: ProposalSection[];
-}
-
-export interface ProposalSection {
-  id: string;
-  proposalId: string;
-  sectionType: ContentCategory;
-  content: string;
-  order: number;
-  aiGenerated: boolean;
-}
-
-export interface RFPAnalysis {
-  id: string;
-  projectName: string;
-  clientName: string;
-  budgetRange: { min: number; max: number };
-  deadline: Date;
-  pageLimit: number;
-  inconsistencies: string[];
-  requiredSections: string[];
-  keyRequirements: string[];
-  priorityLevel: Priority;
-  uploadDate: Date;
-}
-
-export interface ContentTemplate {
-  id: string;
-  title: string;
-  category: ContentCategory;
-  template: string;
-  variables: string[];
-  lastUsed: Date;
-}
-
-export interface AnalyticsData {
-  year: number;
-  projectType: ProjectType;
-  avgFee: number;
-  avgFeePercentage: number;
-  avgDuration: number;
-  winRate: number;
-  projectCount: number;
-}
-
-export interface FilterOptions {
-  projectTypes: ProjectType[];
-  yearRange: { start: number; end: number };
-  budgetRange: { min: number; max: number };
-  status: ProposalStatus[];
-}
-```
-
-### Performance Requirements
-
-| Metric | Target | Measurement |
-|--------|--------|-------------|
-| **First Contentful Paint** | < 1.5s | Lighthouse |
-| **Largest Contentful Paint** | < 2.5s | Lighthouse |
-| **Time to Interactive** | < 3s | Lighthouse |
-| **Cumulative Layout Shift** | < 0.1 | Lighthouse |
-| **Component Render Time** | < 100ms | React DevTools |
-| **Search/Filter Response** | < 200ms | Custom timing |
-| **Mock AI Response** | 1-3s (simulated) | setTimeout |
-
-### Browser Support
-
-| Browser | Minimum Version |
-|---------|----------------|
-| Chrome | Last 2 versions |
-| Firefox | Last 2 versions |
-| Safari | Last 2 versions |
-| Edge | Last 2 versions |
-| Mobile Safari | iOS 14+ |
-| Chrome Mobile | Last 2 versions |
-
-### Responsive Breakpoints
-
-```typescript
-// Tailwind breakpoints
-export const breakpoints = {
-  sm: '640px',   // Small tablets
-  md: '768px',   // Tablets
-  lg: '1024px',  // Laptops
-  xl: '1280px',  // Desktops
-  '2xl': '1536px' // Large desktops
-};
-```
-
-### Mock Data Generation Strategy
-
-```typescript
-// lib/mock-data/proposals.ts
-import { faker } from '@faker-js/faker';
-
-export function generateMockProposals(count: number = 20): Proposal[] {
-  return Array.from({ length: count }, (_, i) => ({
-    id: faker.string.uuid(),
-    title: `${faker.company.name()} ${faker.helpers.arrayElement([
-      'Recreation Center',
-      'Aquatic Complex',
-      'Sports Facility',
-      'Playground Development'
-    ])}`,
-    client: faker.company.name(),
-    projectType: faker.helpers.arrayElement([
-      'Recreation',
-      'Sports Complex',
-      'Aquatic',
-      'Playground'
-    ]),
-    budget: faker.number.int({ min: 500000, max: 15000000 }),
-    submissionDate: faker.date.past({ years: 3 }),
-    status: faker.helpers.arrayElement(['Won', 'Lost', 'Pending']),
-    fee: faker.number.int({ min: 50000, max: 1500000 }),
-    feePercentage: faker.number.float({ min: 8, max: 15, precision: 0.1 }),
-    durationMonths: faker.number.int({ min: 6, max: 36 }),
-    fileUrl: `/sample-proposals/proposal-${i + 1}.pdf`,
-    tags: faker.helpers.arrayElements([
-      'LEED Certified',
-      'Public Sector',
-      'Private Sector',
-      'Fast Track',
-      'Design-Build'
-    ], { min: 1, max: 3 })
-  }));
-}
-```
-
-### AI Simulation Service
-
-```typescript
-// lib/services/ai-simulator.ts
-
-export class AISimulator {
-  private delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
-  
-  async generateContent(
-    category: ContentCategory,
-    context: {
-      projectType: string;
-      budget: number;
-      requirements: string[];
-    }
-  ): Promise<string> {
-    // Simulate API delay
-    await this.delay(2000);
-    
-    // Return mock generated content
-    const templates = {
-      Safety: `Safety is our top priority at ECI Construction...`,
-      Approach: `Our approach to ${context.projectType} projects...`,
-      // ... more templates
-    };
-    
-    return templates[category] || 'Generated content...';
-  }
-  
-  async analyzeRFP(file: File): Promise<RFPAnalysis> {
-    await this.delay(3000);
-    
-    return {
-      id: faker.string.uuid(),
-      projectName: 'Municipal Aquatic Center Renovation',
-      clientName: 'City of Denver',
-      budgetRange: { min: 2500000, max: 3200000 },
-      deadline: new Date('2026-03-15'),
-      pageLimit: 25,
-      inconsistencies: ['Page 3 lists 30-page limit, conflicts with cover page'],
-      requiredSections: ['Safety Plan', 'Project Approach', 'Timeline', 'References'],
-      keyRequirements: ['LEED certification', 'Prevailing wage compliance'],
-      priorityLevel: 'High',
-      uploadDate: new Date()
-    };
-  }
-}
-```
-
-### Testing Strategy (Future)
-
-```mermaid
-graph TB
-    subgraph "Testing Pyramid"
-        E2E[E2E Tests - Playwright]
-        Integration[Integration Tests - Jest]
-        Unit[Unit Tests - Vitest]
-        Visual[Visual Regression - Chromatic]
-    end
-    
-    Unit --> Integration
-    Integration --> E2E
-    Integration --> Visual
-    
-    style Unit fill:#E8F5E9
-    style Integration fill:#FFF3E0
-    style E2E fill:#E3F2FD
-    style Visual fill:#FCE4EC
-```
-
-**For POC (Manual Testing):**
-- Component visual testing in Storybook
-- Manual testing checklist for each feature
-- Cross-browser compatibility checks
-- Mobile responsiveness verification
-- Accessibility audit with axe DevTools
-
----
-
-## UI/UX Design Guidelines
-
-### Design Principles
-
-**1. Professional & Clean**
-- Inspired by modern SaaS tools (Linear, Notion, Vercel)
-- Generous white space
-- Clear visual hierarchy
-- Consistent spacing system
-
-**2. Accessible**
-- WCAG 2.1 AA compliance
-- Keyboard navigation
-- Screen reader support
-- High contrast ratios
-
-**3. Responsive**
-- Mobile-first approach
-- Breakpoints: 640px, 768px, 1024px, 1280px
-- Touch-friendly targets (min 44px)
-
-### Color Palette
-
-```css
-/* Primary */
---primary: 240 5.9% 10%        /* Dark slate */
---primary-foreground: 0 0% 98% /* Off white */
-
-/* Secondary */
---secondary: 240 4.8% 95.9%    /* Light gray */
---secondary-foreground: 240 5.9% 10%
-
-/* Accent */
---accent: 217 91% 60%          /* Blue */
---accent-foreground: 0 0% 100%
-
-/* Destructive */
---destructive: 0 84% 60%       /* Red */
---destructive-foreground: 0 0% 98%
-
-/* Success */
---success: 142 76% 36%         /* Green */
-
-/* Warning */
---warning: 38 92% 50%          /* Orange */
-```
-
-### Typography
-
-```css
-/* Font Family */
---font-sans: 'Inter', system-ui, sans-serif
---font-mono: 'JetBrains Mono', monospace
-
-/* Font Sizes */
---text-xs: 0.75rem    /* 12px */
---text-sm: 0.875rem   /* 14px */
---text-base: 1rem     /* 16px */
---text-lg: 1.125rem   /* 18px */
---text-xl: 1.25rem    /* 20px */
---text-2xl: 1.5rem    /* 24px */
---text-3xl: 1.875rem  /* 30px */
---text-4xl: 2.25rem   /* 36px */
-```
-
-### Spacing System
-
-Based on 4px base unit:
-- xs: 4px
-- sm: 8px
-- md: 16px
-- lg: 24px
-- xl: 32px
-- 2xl: 48px
-- 3xl: 64px
-
-### Component Patterns
-
-**Cards:**
-```tsx
-<Card className="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-  <CardHeader>
-    <CardTitle>Title</CardTitle>
-    <CardDescription>Description</CardDescription>
-  </CardHeader>
-  <CardContent>
-    {/* Content */}
-  </CardContent>
-  <CardFooter>
-    {/* Actions */}
-  </CardFooter>
-</Card>
-```
-
-**Buttons:**
-- Primary: Solid background, high contrast
-- Secondary: Outlined, lower visual weight
-- Ghost: Minimal styling, for tertiary actions
-- Destructive: Red, for delete/cancel actions
-
-**Forms:**
-- Clear labels above inputs
-- Helper text below inputs
-- Inline validation messages
-- Disabled states clearly indicated
 
 ---
 
 ## Timeline & Milestones
 
+### Module 1: AI Assisted Proposal Management (~3-4 Weeks)
+
 ```mermaid
 gantt
-    title POC Development Timeline
+    title Module 1 Development Timeline
     dateFormat YYYY-MM-DD
-    section Setup
-    Environment Setup           :a1, 2026-02-03, 1d
-    Design System              :a2, after a1, 1d
-    
+    section Foundation
+    Backend setup & database          :m1a, 2026-03-01, 3d
+    Auth & role-based access          :m1b, after m1a, 2d
     section Core Features
-    Proposal Library UI        :b1, after a2, 2d
-    RFP Analysis Interface     :b2, after b1, 1d
-    Content Generator          :b3, after b2, 2d
-    
-    section Advanced
-    Analytics Dashboard        :c1, after b3, 2d
-    Proposal Wizard           :c2, after c1, 1d
-    
+    Proposal Library & search         :m1c, after m1b, 3d
+    AI Content Generator              :m1d, after m1c, 3d
+    RFP Analysis Tool                 :m1e, after m1d, 3d
+    section Advanced Features
+    Analytics & Guard Rails           :m1f, after m1e, 3d
+    Proposal Builder Wizard           :m1g, after m1f, 2d
+    Document Generation Engine        :m1h, after m1g, 2d
     section Polish
-    UI Refinement             :d1, after c2, 1d
-    Demo Preparation          :d2, after d1, 1d
-    
-    section Milestones
-    Week 1 Review            :milestone, m1, 2026-02-07, 0d
-    Final Demo Ready         :milestone, m2, 2026-02-14, 0d
-    Client Presentation      :milestone, m3, 2026-02-17, 0d
+    Enhanced AI & testing             :m1i, after m1h, 3d
+    Documentation & training          :m1j, after m1i, 2d
 ```
 
-### Key Milestones
+**Key Milestones:**
+- Week 1: Foundation, auth, and Proposal Library functional
+- Week 2: AI Content Generator and RFP Analysis complete
+- Week 3: Analytics, Guard Rails, Wizard, and Document Generation
+- Week 3-4: Enhanced AI features, testing, documentation
 
-**Milestone 1: Week 1 Review (Feb 7)**
-- ✅ Platform navigation and home page complete
-- ✅ Core proposal UI components built
-- ✅ Proposal library functional
-- ✅ RFP upload interface complete
-- ✅ Future module navigation visible
+### Module 2: CRM & Resource Allocation (~4-6 Weeks)
 
-**Milestone 2: Demo Ready (Feb 14)**
-- ✅ All proposal features fully implemented
-- ✅ Future module mockups created
-- ✅ Mock data integrated across platform
-- ✅ UI polished and responsive
-- ✅ Platform vision clearly communicated
+```mermaid
+gantt
+    title Module 2 Development Timeline
+    dateFormat YYYY-MM-DD
+    section CRM Core
+    Project Pipeline & kanban         :m2a, 2026-04-01, 4d
+    Touch Point Management            :m2b, after m2a, 3d
+    Customer Database                 :m2c, after m2b, 3d
+    section Automation
+    Alerts & Automation               :m2d, after m2c, 3d
+    CRM-Proposal Integration          :m2e, after m2d, 3d
+    section Resources
+    Resource Management               :m2f, after m2e, 5d
+    Skills & utilization tracking     :m2g, after m2f, 3d
+    section Polish
+    Testing & integration             :m2h, after m2g, 3d
+    Documentation & training          :m2i, after m2h, 2d
+```
 
-**Milestone 3: Client Presentation (Feb 17)**
-- ✅ Demo script covering all 4 business pain points
-- ✅ Presentation materials showing platform roadmap
-- ✅ ROI analysis for each module
-- ✅ Feedback collection plan
-- ✅ Phase 2 proposal ready
+**Key Milestones:**
+- Week 1-2: Pipeline, touch points, and customer database
+- Week 3: Alerts, automation, and CRM-Proposal integration
+- Week 4-5: Resource management and utilization tracking
+- Week 5-6: Testing, integration, documentation
+
+### Module 3: Data Aggregation with Project Intelligence (~2 Weeks)
+
+```mermaid
+gantt
+    title Module 3 Development Timeline
+    dateFormat YYYY-MM-DD
+    section Integrations
+    Procore API integration           :m3a, 2026-05-15, 3d
+    Email & calendar integration      :m3b, after m3a, 2d
+    Cloud storage integration         :m3c, after m3b, 1d
+    section Intelligence
+    Project Intelligence & AI         :m3d, after m3c, 2d
+    Advanced Cost Analytics           :m3e, after m3d, 2d
+    section Polish
+    Performance optimization          :m3f, after m3e, 2d
+    Documentation & training          :m3g, after m3f, 1d
+```
+
+**Key Milestones:**
+- Week 1: System integrations (Procore, email, calendar, cloud storage)
+- Week 2: Project intelligence, cost analytics, performance optimization, documentation
+
+**Note:** Module start dates shown above are illustrative. Actual dates depend on Client go/no-go decisions.
 
 ---
 
 ## Success Criteria
 
-### Technical Success
-- [ ] All UI components render correctly across modern browsers
-- [ ] Mobile responsive on screens 375px and up
-- [ ] No console errors or warnings
-- [ ] Smooth animations (60fps)
-- [ ] Fast load times (<2s initial load)
-- [ ] Platform navigation seamlessly connects all modules
+### Module 1 Success
+- All proposal features fully functional (library, AI generator, RFP analysis, wizard)
+- AI content generation produces ECI-specific, high-quality output
+- Guard rails prevent common estimation errors
+- Document generation produces professional PDFs with ECI branding
+- User authentication and role-based access functional
+- Executive time on proposals reduced by 80%+
 
-### Design Success
-- [ ] Matches reference quality (enterprise SaaS level)
-- [ ] Consistent design system applied throughout entire platform
-- [ ] Accessible (keyboard nav, screen readers)
-- [ ] Professional color scheme and typography
-- [ ] Future modules visually distinguished but integrated
+### Module 2 Success
+- Project pipeline provides clear visibility from design through RFP
+- Touch points and relationship history are easily accessible
+- Alerts proactively notify team of upcoming deadlines and relationship risks
+- CRM data seamlessly feeds into proposal module
+- Resource allocation and utilization clearly visible across all projects
 
-### Demo Success - Proposal Module
-- [ ] Can demonstrate all 5 core proposal features
-- [ ] Sample data is realistic and relevant to ECI
-- [ ] User flows are intuitive
-- [ ] Simulated AI responses are convincing
-- [ ] Client can visualize production version
+### Module 3 Success
+- Procore integration provides real-time project data
+- AI-powered insights surface actionable cost trends and predictions
+- Advanced analytics dashboards replace manual reporting
+- System performance meets enterprise standards
+- All integrations function reliably
 
-### Demo Success - Platform Vision
-- [ ] Navigation clearly shows all 5 modules addressing Ted's pain points:
-  - [ ] ✅ Proposal Management (working)
-  - [ ] 🔜 Municipal Project CRM (mockup - Ted's email requirement)
-  - [ ] 🔜 Resource Allocation (mockup)
-  - [ ] 🔜 Data Aggregation (mockup)
-  - [ ] 🔜 Project Intelligence (mockup)
-- [ ] Each pain point from meeting is addressed by a specific module
-- [ ] CRM mockup shows municipal project tracking with touch-point management
-- [ ] Integration points with Procore/financial systems are clear
-- [ ] Roadmap shows logical build sequence
-- [ ] Value proposition demonstrates why custom > off-the-shelf
-
-### Business Success
-- [ ] Ted Johnson and team are impressed with proposal module
-- [ ] **Ted sees the platform vision addressing all 5 pain points**
-- [ ] Clear differentiation from off-the-shelf proposal-only solutions
-- [ ] Cost/value proposition is evident for full platform
-- [ ] Team understands how modules work together
-- [ ] Team is eager to move to Phase 2 (production proposal module + CRM)
-- [ ] **ECI can envision phases 3-4 (resource management, data aggregation)**
-- [ ] Positioning vs. competitors (Shred.ai, Unanet, Responsive) is clear
-- [ ] Integration strategy resonates (vs. multiple vendor silos)
-- [ ] **CRM for municipal project tracking resonates with Ted's long-cycle sales process**
-- [ ] **Institutional knowledge preservation value is clear** (succession planning, tribal knowledge retention)
-- [ ] **Estimate validation & guard rails** demonstrate custom solution advantages over off-the-shelf
-
-### Demo Success
-- [ ] Can demonstrate all 5 core proposal features
-- [ ] Can show preview mockups of 4 future modules (CRM, resources, data aggregation, project intelligence)
-- [ ] Sample data is realistic and relevant to ECI
-- [ ] User flows are intuitive
-- [ ] Simulated AI responses are convincing
-- [ ] Client can visualize production version
-- [ ] Platform navigation shows complete 5-module vision
-
-### Business Success (Final)
-- [ ] Ted Johnson and team are impressed with both proposal module and platform vision
-- [ ] Clear differentiation from off-the-shelf solutions (Shred.ai, Unanet, Responsive)
-- [ ] Cost/value proposition is evident ($70K custom vs. $37.5-45K for 3 years of limited tools)
-- [ ] Team is eager to move to Phase 2 (production build starting with proposals + CRM)
-- [ ] ECI sees value in unified platform vs. multiple vendor silos
-- [ ] Municipal CRM requirement from Ted's email is acknowledged and addressed
+### Overall Platform Success
+- Unified platform replaces siloed manual processes
+- Institutional knowledge captured and preserved
+- Executive team has single-pane-of-glass visibility across the business
+- Platform foundation supports future expansion
 
 ---
 
-## Risk Management
+## Project Assumptions
 
-### Risks & Mitigation
+**Client Responsibilities:**
+- Provide access to proposal documents
+- Designate project stakeholder for weekly check-ins
+- Provide timely feedback on deliverables
 
-| Risk | Impact | Probability | Mitigation |
-|------|--------|-------------|------------|
-| Timeline slippage | High | Medium | Build MVP first, add polish incrementally |
-| Overly complex features | Medium | Medium | Focus on visual demo, not full functionality |
-| Design quality below expectations | High | Low | Use proven component library, follow best practices |
-| Mock data not realistic enough | Medium | Medium | Work closely with ECI to get real sample data |
-| Technical difficulties | Medium | Low | Use well-tested tech stack, avoid bleeding edge |
-
----
-
-## Next Steps
-
-### Immediate Actions (This Week)
-1. ✅ Get approval on implementation plan
-2. ⬜ Set up development environment
-3. ⬜ Create initial project structure
-4. ⬜ Build design system and component library
-5. ⬜ Request sample proposal documents from ECI
-
-### Week 2 Actions
-1. ⬜ Build core UI features
-2. ⬜ Integrate mock data
-3. ⬜ Conduct internal review
-4. ⬜ Iterate based on feedback
-
-### Week 3 Actions
-1. ⬜ Final polish and optimization
-2. ⬜ Prepare demo materials
-3. ⬜ Present to ECI
-4. ⬜ Collect feedback for production roadmap
-
----
-
-## Appendix
-
-### Sample Data Structure
-
-```typescript
-interface Proposal {
-  id: string;
-  title: string;
-  client: string;
-  projectType: 'Recreation' | 'Sports Complex' | 'Aquatic' | 'Playground';
-  budget: number;
-  submissionDate: Date;
-  status: 'Won' | 'Lost' | 'Pending';
-  fee: number;
-  feePercentage: number;
-  duration: number; // months
-  fileUrl: string;
-  tags: string[];
-}
-
-interface RFPAnalysis {
-  projectName: string;
-  budgetRange: { min: number; max: number };
-  deadline: Date;
-  pageLimit: number;
-  inconsistencies: string[];
-  requiredSections: string[];
-  keyRequirements: string[];
-  priorityLevel: 'High' | 'Medium' | 'Low';
-}
-```
-
----
-
-**Document Status:** Living Document - Updated during implementation  
-**Last Updated:** February 3, 2026  
-**Next Review:** February 7, 2026
+**Technical Requirements:**
+- Modern web browsers
+- Internet connection
+- ECI proposal documents are in standard formats (PDF, Word)
+- Existing systems have documented APIs or export capabilities
